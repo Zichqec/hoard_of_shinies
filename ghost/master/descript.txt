@@ -1,0 +1,18 @@
+charset,UTF-8
+
+name,Hoard of Shinies
+type,ghost
+
+shiori,aosora.dll
+
+craftman,Zichqec
+craftmanw,Zichqec
+craftmanurl,https://ukagaka.zichqec.com/
+
+sakura.name,Mica
+kero.name,Stash
+
+sstp.allowunspecifiedsend,0
+
+balloon,Ocean Fishies
+balloon,Beach Day Gone Wrong

@@ -1,0 +1,5 @@
+charset,UTF-8
+type,ghost
+name,Hoard of Shinies
+directory,hoard_of_shinies_zi
+balloon.directory,ocean_fishies_zi
