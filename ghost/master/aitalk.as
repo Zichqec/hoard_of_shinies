@@ -126,3 +126,18 @@ talk RandomTalk
 	
 	\s[1]Sorry, sorry! I just noticed how pretty your necklace is, \w8\s[2]aah it's nice!!
 }
+
+talk ChainTest if (ChainIndex == 0)
+{
+	0
+}
+
+talk ChainTest if (ChainIndex == 1)
+{
+	1
+}
+
+talk ChainTest if (ChainIndex == 2)
+{
+	2
+}
