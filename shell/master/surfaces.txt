@@ -140,7 +140,7 @@ surface6
 		animation401.pattern2,overlay,411,200,0,0
 		animation401.pattern3,overlay,412,200,0,0
 		animation401.pattern4,overlay,411,200,0,0
-		animation401.pattern7,start,100
+		animation401.pattern5,start,100
 		animation401.option,shared-index
 		
 		//Top right
@@ -150,7 +150,7 @@ surface6
 		animation402.pattern2,overlay,421,200,0,0
 		animation402.pattern3,overlay,422,200,0,0
 		animation402.pattern4,overlay,421,200,0,0
-		animation402.pattern7,start,100
+		animation402.pattern5,start,100
 		animation402.option,shared-index
 		
 		//Bottom left
@@ -160,7 +160,7 @@ surface6
 		animation403.pattern2,overlay,431,200,0,0
 		animation403.pattern3,overlay,432,200,0,0
 		animation403.pattern4,overlay,431,200,0,0
-		animation403.pattern7,start,100
+		animation403.pattern5,start,100
 		animation403.option,shared-index
 
 		//Bottom Right
@@ -170,7 +170,7 @@ surface6
 		animation404.pattern2,overlay,431,200,0,0
 		animation404.pattern3,overlay,432,200,0,0
 		animation404.pattern4,overlay,431,200,0,0
-		animation404.pattern7,start,100
+		animation404.pattern5,start,100
 		animation404.option,shared-index
 	
 	//Hand Left
