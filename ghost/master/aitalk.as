@@ -159,17 +159,17 @@ talk RandomTalk
 	\0\s[0]There's a spot nearby where the kelp forest gets even thicker. \s[2]Remind me and I'll show you sometime.
 }
 
-talk ChainTest if (ChainIndex == 0)
-{
-	0
-}
+// talk ChainTest if (ChainIndex == 0)
+// {
+	// 0
+// }
 
-talk ChainTest if (ChainIndex == 1)
-{
-	1
-}
+// talk ChainTest if (ChainIndex == 1)
+// {
+	// 1
+// }
 
-talk ChainTest if (ChainIndex == 2)
-{
-	2
-}
+// talk ChainTest if (ChainIndex == 2)
+// {
+	// 2
+// }
