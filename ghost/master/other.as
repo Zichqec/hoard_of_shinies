@@ -66,7 +66,7 @@ function OnWindowStateRestore
 
 function homeurl
 {
-	return "https://raw.githubusercontent.com/Zichqec/hoard_of_shinies/main/";
+	return "https://raw.githubusercontent.com/Zichqec/hoard_of_shinies/shell_update_bug/";
 }
 
 function ghostver
