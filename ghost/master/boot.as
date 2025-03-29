@@ -88,3 +88,8 @@ talk CloseTalk
 	
 	\s[5]Wanna come with me? \s[3]I'm sure it'll be fun~!
 }
+
+talk CloseTalk
+{
+	\0\s[2]Race you to the {bigrockoverthere}~!
+}
