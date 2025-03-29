@@ -93,7 +93,7 @@ function homeurl
 
 function ghostver
 {
-	return "1.0.0";
+	return "1.0.1";
 }
 
 //—————————————————————————————— Right click menu links ——————————————————————————————
