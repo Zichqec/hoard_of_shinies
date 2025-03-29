@@ -125,6 +125,73 @@ surface5
 	animation750.pattern1,overlay,753,800,0,0
 }
 
+//Stress flap
+surface6
+{
+	//Eyes sparkle and moving!
+	animation100.interval,runonce
+	animation100.pattern0,parallelstop,(401,402,403,404)
+	animation100.pattern1,alternativestart,(401,402,403,404)
+
+		//Top left
+		animation401.interval,never
+		animation401.pattern0,overlay,411,0,0,0
+		animation401.pattern1,overlay,412,200,0,0
+		animation401.pattern2,overlay,411,200,0,0
+		animation401.pattern3,overlay,412,200,0,0
+		animation401.pattern4,overlay,411,200,0,0
+		animation401.pattern7,start,100
+		animation401.option,shared-index
+		
+		//Top right
+		animation402.interval,never
+		animation402.pattern0,overlay,421,0,0,0
+		animation402.pattern1,overlay,422,200,0,0
+		animation402.pattern2,overlay,421,200,0,0
+		animation402.pattern3,overlay,422,200,0,0
+		animation402.pattern4,overlay,421,200,0,0
+		animation402.pattern7,start,100
+		animation402.option,shared-index
+		
+		//Bottom left
+		animation403.interval,never
+		animation403.pattern0,overlay,431,0,0,0
+		animation403.pattern1,overlay,432,200,0,0
+		animation403.pattern2,overlay,431,200,0,0
+		animation403.pattern3,overlay,432,200,0,0
+		animation403.pattern4,overlay,431,200,0,0
+		animation403.pattern7,start,100
+		animation403.option,shared-index
+
+		//Bottom Right
+		animation404.interval,never
+		animation404.pattern0,overlay,431,0,0,0
+		animation404.pattern1,overlay,432,200,0,0
+		animation404.pattern2,overlay,431,200,0,0
+		animation404.pattern3,overlay,432,200,0,0
+		animation404.pattern4,overlay,431,200,0,0
+		animation404.pattern7,start,100
+		animation404.option,shared-index
+	
+	//Hand Left
+	animation700.interval,always
+	animation700.pattern0,overlay,700,0,0,0
+	animation700.pattern1,overlay,700,150,0,0
+	animation700.pattern2,overlay,701,0,0,0
+	animation700.pattern3,overlay,701,250,0,0
+
+	//Hand Right
+	animation750.interval,always
+	animation750.pattern0,overlay,750,0,0,0
+	animation750.pattern1,overlay,750,150,0,0
+	animation750.pattern2,overlay,751,0,0,0
+	animation750.pattern3,overlay,751,250,0,0
+	
+	//Outer eyelids
+	animation501.interval,runonce
+	animation501.pattern0,overlay,503,0,0,0
+}
+
 //eepy
 surface9
 {
@@ -178,7 +245,7 @@ surface9
 }
 
 //Fin flips - normal
-surface.append0,1,5
+surface.append0,1,5,6
 {
 	//Fin flips
 	animation0.interval,always
@@ -218,7 +285,7 @@ surface.append2,3,4
 }
 
 //Talk animations
-surface.append0-4
+surface.append0-4,6
 {
 	//Talk
 	animation10.interval,talk,4

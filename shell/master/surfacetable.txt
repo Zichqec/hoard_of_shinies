@@ -11,6 +11,7 @@ group,Base
 	2,Flap
 	3,Hold
 	4,Face
-	5,Gasp
+	5,Admire
+	6,Stressed
 	9,Sleepy
 }
