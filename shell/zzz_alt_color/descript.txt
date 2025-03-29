@@ -1,0 +1,39 @@
+charset,UTF-8
+type,shell
+
+name,AAA alt color
+craftman, Ako-Kpiali
+craftmanurl, https://ako-kipali.tumblr.com/ghost-stuff
+
+seriko.alignmenttodesktop,free
+seriko.use_self_alpha,1
+
+//Clothing
+sakura.bindgroup601.name,Belts,Coral
+sakura.bindgroup601.default,0
+
+sakura.bindgroup602.name,Belts,Seaweed
+sakura.bindgroup602.default,0
+
+sakura.bindgroup603.name,Belts,Pebbles
+sakura.bindgroup603.default,0
+
+sakura.bindgroup621.name,Hats,Coral
+sakura.bindgroup621.default,0
+
+sakura.bindgroup622.name,Hats,Seaweed
+sakura.bindgroup622.default,0
+
+sakura.bindgroup623.name,Hats,Pebbles
+sakura.bindgroup623.default,0
+
+sakura.bindgroup641.name,Necklaces,Coral
+sakura.bindgroup641.default,0
+
+sakura.bindgroup642.name,Necklaces,Seaweed
+sakura.bindgroup642.default,0
+
+sakura.bindgroup643.name,Necklaces,Pebbles
+sakura.bindgroup643.default,0
+
+sakura.menu,hidden

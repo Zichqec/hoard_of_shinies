@@ -1,0 +1,16 @@
+charset,UTF-8
+version,1
+option,DisableNoDefineSurfaces
+
+group,Base
+{
+	scope,0
+	
+	0,Default
+	1,Embarrassed
+	2,Flap
+	3,Hold
+	4,Face
+	5,Gasp
+	9,Sleepy
+}
