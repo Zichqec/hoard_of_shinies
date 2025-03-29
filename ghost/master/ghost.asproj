@@ -1,6 +1,7 @@
-main.as
 aitalk.as
+commu.as
 boot.as
+main.as
 meta.as
 other.as
 sakura_menu.as
