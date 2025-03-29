@@ -15,7 +15,20 @@ function metal
 		"silver",
 		"copper",
 		"bronze",
-		"platinum"
+		"platinum",
+		"titanium"
+	]);
+}
+
+function plainmetal
+{
+	return Random.Select([
+		"iron",
+		"stainless steel",
+		"copper",
+		"brass",
+		"nickel",
+		"pewter"
 	]);
 }
 
@@ -64,6 +77,16 @@ function necklace
 	]);
 }
 
+function fork
+{
+	return Random.Select([
+		"fork",
+		"key",
+		"hinge",
+		"thingy" //I mean.............
+	]);
+}
+
 function whileyouwereaway
 {
 	return Random.Select([
@@ -90,5 +113,15 @@ function bythebay
 		"behind the market",
 		"in an old chest",
 		"under an old shipwreck"
+	]);
+}
+
+function bigrockoverthere
+{
+	return Random.Select([
+		"big rock over there",
+		"bay",
+		"reef",
+		"market"
 	]);
 }

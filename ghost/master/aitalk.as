@@ -127,6 +127,38 @@ talk RandomTalk
 	\s[1]Sorry, sorry! I just noticed how pretty your necklace is, \w8\s[2]aah it's nice!!
 }
 
+talk RandomTalk
+{
+	\s[3]Ahh, look at the way this {metal} {necklace} sparkles~!
+}
+
+talk RandomTalk
+{
+	\s[0]I'm trying to find a good spot for this {fork}... \s[6]It doesn't quite fit in with these other {plainmetal} items, does it? \s[1]Hmm...
+}
+
+talk RandomTalk
+{
+	\0\s[6]Have I got too many {plainmetal} items grouped together? \s[1]Maybe I should split them into smaller subcategories...
+}
+
+talk RandomTalk
+{
+	\0\s[2]I got a great deal on this {plainmetal} {fork} at the market. \s[3]For a price like that, I couldn't pass it up~!
+}
+
+talk RandomTalk
+{
+	\0\s[0]Look at all the empty ledges waiting to be filled... \s[4]We should have room for a while yet~!
+	
+	\s[1]Or at least for a year or two, hehe...
+}
+
+talk RandomTalk
+{
+	\0\s[0]There's a spot nearby where the kelp forest gets even thicker. \s[2]Remind me and I'll show you sometime.
+}
+
 talk ChainTest if (ChainIndex == 0)
 {
 	0
