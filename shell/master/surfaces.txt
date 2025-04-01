@@ -121,14 +121,12 @@ surface5
 	animation30.pattern0,overlay,551,0,0,0
 	
 	//hand left
-	animation700.interval,always
+	animation700.interval,runonce
 	animation700.pattern0,overlay,703,0,0,0
-	animation700.pattern1,overlay,703,800,0,0
 
 	//hand right
-	animation750.interval,always
+	animation750.interval,runonce
 	animation750.pattern0,overlay,753,0,0,0
-	animation750.pattern1,overlay,753,800,0,0
 }
 
 //Stress flap
