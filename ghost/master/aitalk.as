@@ -159,6 +159,16 @@ talk RandomTalk
 	\0\s[0]There's a spot nearby where the kelp forest gets even thicker. \s[2]Remind me and I'll show you sometime.
 }
 
+talk RandomTalk
+{
+	\s[5]Wow... \w8\s[2]Look look, look behind you, the sun is catching on those bubbles just right~!
+}
+
+// talk RandomTalk
+// {
+	// \s[0]
+// }
+
 // talk ChainTest if (ChainIndex == 0)
 // {
 	// 0
