@@ -1,6 +1,6 @@
 function OnSpectrePlugin@ConfirmCalibration
 {
-	return "\![raiseplugin,Spectre,OnCustomCalibrationConfirm,--option=include,normal,embarrassed,smile,surprised]";
+	return "\![raiseplugin,Spectre,OnCustomCalibrationConfirm,--option=include,normal,embarrassed,smile,surprised,discouraged]";
 }
 
 function OnSpectrePlugin@Surface
@@ -20,6 +20,10 @@ function OnSpectrePlugin@Surface
 	else if (Shiori.Reference[0] == "surprised")
 	{
 		return "\s[5]";
+	}
+	else if (Shiori.Reference[0] == "discouraged") //It's a bit of a stretch, but... I think it really helps for the dissociated pool
+	{
+		return "\s[6]";
 	}
 }
 
