@@ -56,6 +56,30 @@ talk BootTalk
 	\s[2]So many sparklies~ Come check them out~!
 }
 
+talk BootTalk
+{
+	%{
+		Save.Data.SpecialClose.Clear();
+		Save.Data.SpecialClose.Add("SparklyAtMarket");
+		Save.Data.SpecialClose.Add("{metal} {necklace}");
+		Save.Data.SpecialClose.Add("{metal}");
+	}
+	\s[-1].\w8\w8.\w8\w8.
+	
+	\w8\w8\s[6]I'm here I'm here I'm here I'm here!!
+	
+	\s[1]Sorry, sorry! I got a late start because they had this really pretty {Save.Data.SpecialClose[1]} at the market... \s[5]It was SO sparkly...
+	
+	\w8\w8\s[6]I couldn't afford it though... \s[1]I'm thinking about taking back some of our {Save.Data.SpecialClose[2]} coins to barter for it. \s[1]\i[451]You should come with me later, so we can decide together if it's a good trade.
+}
+
+talk BootTalk
+{
+	\s[2]Hey hey hey~! \s[5]Did you see the {crab} outside?
+	
+	\s[2]It's \f[italic,1]huge\f[italic,default], I've never seen one so big! Hehehe~
+}
+
 
 //—————————————————————————————— Closing ——————————————————————————————
 talk CloseTalk
@@ -91,5 +115,21 @@ talk CloseTalk
 
 talk CloseTalk
 {
-	\0\s[2]Race you to the {bigrockoverthere}~!
+	\s[2]Race you to the {bigrockoverthere}~!
+}
+
+talk CloseTalk_SparklyAtMarket
+{
+	\s[6]Let's go let's go, I want to see if they've still got that {Save.Data.SpecialClose[1]}. \s[1]You have the {Save.Data.SpecialClose[2]} coins, right?
+	
+	\s[2]Then, come on! You're gonna love it, I promise~
+}
+
+talk CloseTalk
+{
+	\s[0]\i[450]Are you heading out? \s[0]Alright then.
+	
+	\s[1]Um, I'd come with you but I lost a {necklace} around here somewhere and I need to find it...
+	
+	\s[2]I'll catch up with you later~
 }

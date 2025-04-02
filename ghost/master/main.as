@@ -3,6 +3,7 @@ function OnAosoraDefaultSaveData
 {
 	Save.Data.TalkInterval = 180;
 	Save.Data.Username = "friend";
+	Save.Data.SpecialClose = []; //Don't really want to save this but it's QOL for me who reloads a lot...
 }
 
 //Values to be set upon loading
@@ -20,6 +21,7 @@ function OnAosoraLoad
 
 function OnBoot()
 {
+	Save.Data.SpecialClose.Clear();
 	local dressups = RandomizeDressups();
 	
 	return "\1\s[10]\![set,alignmenttodesktop,bottom]\0{dressups}\s[0]" + BootTalk();
@@ -59,7 +61,20 @@ function RandomizeDressups
 
 function OnClose()
 {
-	return CloseTalk() + "\_w[2000]\-";
+	local output = "";
+	
+	//If there is a special closing dialogue, use it
+	local SpecialClose = Reflection.Get("CloseTalk_{Save.Data.SpecialClose[0]}");
+	if (SpecialClose.IsObject())
+	{
+		output += SpecialClose();
+	}
+	else //Otherwise, default
+	{
+		output += CloseTalk();
+	}
+	
+	return output + "\_w[2000]\-";
 }
 
 function OnNotifySelfInfo
