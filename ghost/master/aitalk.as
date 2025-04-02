@@ -189,3 +189,18 @@ talk RandomTalk
 {
 	\s[3]Hehe... hehehe... \w8\s[2]Our collection is coming along so nicely~!
 }
+
+// talk ChainTest if (ChainIndex == 0)
+// {
+	// 0
+// }
+
+// talk ChainTest if (ChainIndex == 1)
+// {
+	// 1
+// }
+
+// talk ChainTest if (ChainIndex == 2)
+// {
+	// 2
+// }

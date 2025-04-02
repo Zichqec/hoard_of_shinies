@@ -1,2 +1,3 @@
 ghost/master/savedata.asv,nonar,noupdate
+ghost/master/debug.asproj,nonar,noupdate
 ocean_fishies_zi/,noupdate
