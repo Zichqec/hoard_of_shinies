@@ -125,3 +125,39 @@ function bigrockoverthere
 		"market"
 	]);
 }
+
+function ashark
+{
+	return Random.Select([
+		"a shark",
+		"a school of fish",
+		"a lobster",
+		"a crab",
+		"a whale",
+		"another merfolk",
+		"a ray"
+	]);
+}
+
+function thekelpforest
+{
+	return Random.Select([
+		"the edges of the kelp forest",
+		"those big rocks by the cliff",
+		"one of the small tunnels that leads into the back of our cave",
+		"the reef",
+		"that spot with all the good pebbles"
+	]);
+}
+
+function crab
+{
+	return Random.Select([
+		"crab",
+		"ray",
+		"eel",
+		"lobster",
+		"octopus",
+		"squid"
+	]);
+}
