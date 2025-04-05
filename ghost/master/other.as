@@ -84,7 +84,7 @@ function homeurl
 
 function ghostver
 {
-	return "1.0.1";
+	return "1.0.2";
 }
 
 //Arg 0: The string to search
