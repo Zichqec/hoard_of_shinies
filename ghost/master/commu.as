@@ -185,14 +185,14 @@ talk NeedleTalk
 	\s[0]Where should we put it...?
 }
 
-talk OnNeedlePoke
+talk NeedleTalk
 {
 	\s[5]Oh wow... This is a gift for me...?
 	
 	\s[2]Ohh thank you thank you {username}! \s[3]I'll keep it safe~!
 }
 
-talk OnNeedlePoke
+talk NeedleTalk
 {
 	\s[5]Ohhh... that's so cool, what is it...?
 	
