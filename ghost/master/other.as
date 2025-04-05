@@ -9,7 +9,7 @@ function OnTranslate
 
 function AutoPause(talkstr)
 {
-	if (talkstr.IndexOf("\![no-autopause]").IsNull() && talkstr.IndexOf("■Aosora reload completed").IsNull())
+	if (!(FoundInStr(talkstr,"\![no-autopause]") || FoundInStr(talkstr,"■Aosora reload completed")))
 	{
 		talkstr = talkstr.Replace("\x\n[-200]\n\w8\w4\n\w8\w4","\x"); //bandaid patch for firstboot, I'll try to come up with something better later...
 		talkstr = talkstr.Replace(", ",",\w4 ");
@@ -85,6 +85,13 @@ function homeurl
 function ghostver
 {
 	return "1.0.0";
+
+//Arg 0: The string to search
+//Arg 1: The substring to search for
+function FoundInStr(str, search)
+{
+	if (!str.IndexOf(search).IsNull()) {return true;}
+	else {return false;}
 }
 
 //—————————————————————————————— Right click menu links ——————————————————————————————
