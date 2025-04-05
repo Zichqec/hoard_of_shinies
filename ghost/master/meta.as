@@ -14,7 +14,7 @@ function OnInstallComplete
 	{
 		output += "\n\n\_q";
 		output += "\![*]\__q[OnInstallComplete@Action,call]Call {Shiori.Reference[1]}\__q  \![*]\__q[OnInstallComplete@Action,change]Change to {Shiori.Reference[1]}\__q\n\n";
-		output += "\![*]\q[Thanks,blank]";
+		output += "\![*]\q[Done,blank]";
 	}
 	
 	return output;
