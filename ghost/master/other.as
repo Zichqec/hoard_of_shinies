@@ -62,18 +62,9 @@ function OnAnchorSelect
 
 function OnKeyPress
 {
-	if (Shiori.Reference[0] == "f1")
-	{
-		return "\![open,readme]";
-	}
-	else if (Shiori.Reference[0] == "t")
-	{
-		return OnStartTalk;
-	}
-	else if (Shiori.Reference[0] == "r")
-	{
-		return OnLastTalk;
-	}
+	if (Shiori.Reference[0] == "f1") { return "\![open,readme]"; }
+	else if (Shiori.Reference[0] == "t") { return OnStartTalk; }
+	else if (Shiori.Reference[0] == "r") { return OnLastTalk; }
 }
 
 function OnSurfaceRestore
