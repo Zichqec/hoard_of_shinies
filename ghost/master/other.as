@@ -102,31 +102,18 @@ function FormatLinks(links)
 	local output = "";
 	for (i = 0; i < links.length; i++)
 	{
-		output += links[i];
-		//Alternate between adding  or 
-		if (i % 2 == 1)
-		{
-			output += (2).ToAscii();
-		}
-		else
-		{
-			output += (1).ToAscii();
-		}
+		//Name then 0x01, URL then 0x02
+		output += links[i]["name"] + (1).ToAscii();
+		output += links[i]["url"] + (2).ToAscii();
 	}
 	return output;
 }
 
 function sakura@recommendsites
 {
-	return FormatLinks(recommendsites_sakura());
-}
-
-function recommendsites_sakura
-{
-	return
-	[
-		"Zi's Ukagaka Space", "https://ukagaka.zichqec.com/",
-		"Merfolk May freeshell", "https://ako-kipali.tumblr.com/ghost-stuff",
-		"Aosora SHIORI", "https://github.com/kanadelab/aosora-shiori"
-	];
+	return FormatLinks([
+		{name: "Zi's Ukagaka Space", url: "https://ukagaka.zichqec.com/"},
+		{name: "Merfolk May freeshell", url: "https://ako-kipali.tumblr.com/ghost-stuff"},
+		{name: "Aosora SHIORI", url: "https://github.com/kanadelab/aosora-shiori"}
+	]);
 }
