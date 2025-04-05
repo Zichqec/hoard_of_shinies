@@ -22,9 +22,8 @@ function OnAosoraLoad
 function OnBoot()
 {
 	Save.Data.SpecialClose.Clear();
-	local dressups = RandomizeDressups();
 	
-	return "\1\s[10]\![set,alignmenttodesktop,bottom]\0{dressups}\s[0]" + BootTalk();
+	return "\1\s[10]\![set,alignmenttodesktop,bottom]\0{RandomizeDressups()}\s[0]" + BootTalk();
 }
 
 function RandomizeDressups
