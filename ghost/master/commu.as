@@ -16,7 +16,14 @@ function OnSpectrePlugin@Possession
 {
 	if (Random.GetIndex(0,4) == 0)
 	{
-		return Reflection.Get("SpectreTalk_{Shiori.Reference[0]}");
+		if (Shiori.Reference[1] == 1)
+		{
+			return Reflection.Get("SpectreTalk_spooky");
+		}
+		else
+		{
+			return Reflection.Get("SpectreTalk_{Shiori.Reference[0]}");
+		}
 	}
 }
 
@@ -35,6 +42,19 @@ talk SpectreTalk_cheerful
 {
 	\s[2]Ahh, everything's sparkling perfectly right now, isn't it~?
 }
+
+talk SpectreTalk_cheerful
+{
+	\s[3]Hehe~ I feel so bubbly today~
+}
+
+talk SpectreTalk_cheerful
+{
+	\s[0]We should definitely go treasure hunting later.
+	
+	\s[5]I just know that we'd find something good, \w8\s[2]I can feel it~!
+}
+
 
 talk SpectreTalk_miserable
 {
@@ -55,12 +75,18 @@ talk SpectreTalk_miserable
 	\s[1]I wonder if swimming around for a while would help.
 }
 
-talk SpectreTalk_dissociated
+talk SpectreTalk_miserable
 {
-	\s[1]Did you hear someone outside just now...?
+	\s[6]Is it a little darker in here than usual...?
 	
-	Maybe not... It must be my imagination.
+	\s[1]Maybe I'm just imagining things.
 }
+
+talk SpectreTalk_miserable
+{
+	\s[6]Hmm... No, no no no...
+}
+
 
 talk SpectreTalk_dissociated
 {
@@ -73,6 +99,60 @@ talk SpectreTalk_dissociated
 	
 	\s[1]\i[450]It's probably nothing, right...? \s[1]Right.
 }
+
+talk SpectreTalk_dissociated
+{
+	\s[0]Something's wrong.
+	
+	... \s[6]I'm not sure what.
+}
+
+talk SpectreTalk_dissociated
+{
+	\s[0]Hmm... \s[6]I have this sense of unease, like there's a predator nearby.
+	
+	\s[1]\i[450]But I don't see anything. \s[1]Do you...?
+}
+
+talk SpectreTalk_dissociated
+{
+	\s[6]Um, I wonder if maybe we shouldn't stay here too long today...
+	
+	\s[1]I just feel like something terrible might happen.
+}
+
+
+talk SpectreTalk_spooky
+{
+	\s[1]Did you hear someone outside just now...?
+	
+	Maybe not... It must be my imagination.
+}
+
+talk SpectreTalk_spooky
+{
+	\s[6]I feel like the cave suddenly got a lot smaller...
+	
+	\s[1]\i[450]Did you notice it too...? \w8\s[6]It might just be me...
+}
+
+talk SpectreTalk_spooky
+{
+	\s[6]Did something fall over? I heard something terrible...
+}
+
+talk SpectreTalk_spooky
+{
+	\s[6]Do you think... do you think a sea monster got in here...?
+	
+	\s[1]\i[450]I know, I know, sea monsters aren't real, but... \s[1]I swear I heard \f[italic,1]something\f[italic,default]...
+}
+
+talk SpectreTalk_spooky
+{
+	\s[6]Did you hear a growling noise...?
+}
+
 
 //—————————— Needle poking ——————————
 function OnNeedlePoke
@@ -103,4 +183,18 @@ talk NeedleTalk
 	\s[5]Ohh... \s[2]Oh wow, where did you find this? \s[5]It's so shiny...
 	
 	\s[0]Where should we put it...?
+}
+
+talk OnNeedlePoke
+{
+	\s[5]Oh wow... This is a gift for me...?
+	
+	\s[2]Ohh thank you thank you {username}! \s[3]I'll keep it safe~!
+}
+
+talk OnNeedlePoke
+{
+	\s[5]Ohhh... that's so cool, what is it...?
+	
+	\s[2]Hehe, I don't know what it is, but it's shiny so it belongs in our collection~!
 }

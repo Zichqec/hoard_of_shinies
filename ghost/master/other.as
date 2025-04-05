@@ -84,7 +84,8 @@ function homeurl
 
 function ghostver
 {
-	return "1.0.0";
+	return "1.0.1";
+}
 
 //Arg 0: The string to search
 //Arg 1: The substring to search for
@@ -114,4 +115,32 @@ function sakura@recommendsites
 		{name: "Merfolk May freeshell", url: "https://ako-kipali.tumblr.com/ghost-stuff"},
 		{name: "Aosora SHIORI", url: "https://github.com/kanadelab/aosora-shiori"}
 	]);
+}
+
+function getaistate
+{
+	local Points = [
+		{name: "RandomTalk", val: RandomTalk.length},
+		{name: "BootTalk", val: BootTalk.length},
+		{name: "CloseTalk", val: CloseTalk.length},
+		{name: "SpectreTalk_cheerful", val: SpectreTalk_cheerful.length},
+		{name: "SpectreTalk_miserable", val: SpectreTalk_miserable.length},
+		{name: "SpectreTalk_dissociated", val: SpectreTalk_dissociated.length},
+		{name: "SpectreTalk_spooky", val: SpectreTalk_spooky.length},
+		{name: "OnNeedlePoke", val: OnNeedlePoke.length}
+	];
+	
+	local labels = "";
+	local values = "";
+	
+	for (local i = 0; i < Points.length; i++)
+	{
+		if (values != "") { values += ","; } //there might be a better method in aosora but i'm not sure
+		values += Points[i]["val"];
+		
+		if (labels != "") { labels += ","; }
+		labels += Points[i]["name"];
+	}
+	
+	return values + "{(1).ToAscii}" + labels;	
 }
