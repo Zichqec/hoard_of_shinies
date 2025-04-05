@@ -1,4 +1,3 @@
-
 descript
 {
 	version,1
@@ -15,6 +14,7 @@ surface0
 	animation700.pattern1,overlay,700,800,0,0
 	animation700.pattern2,overlay,701,0,0,0
 	animation700.pattern3,overlay,701,800,0,0
+	animation700.option,shared-index
 
 	//Hand Right
 	animation750.interval,always
@@ -22,6 +22,7 @@ surface0
 	animation750.pattern1,overlay,750,800,0,0
 	animation750.pattern2,overlay,751,0,0,0
 	animation750.pattern3,overlay,751,800,0,0
+	animation750.option,shared-index
 }
 
 //EEEMOTIONS!!!!
@@ -34,6 +35,7 @@ surface1
 	animation700.pattern1,overlay,704,800,0,0
 	animation700.pattern2,overlay,703,0,0,0
 	animation700.pattern3,overlay,703,800,0,0
+	animation700.option,shared-index
 
 	//Hand Right
 	animation750.interval,always
@@ -41,6 +43,7 @@ surface1
 	animation750.pattern1,overlay,753,800,0,0
 	animation750.pattern2,overlay,754,0,0,0
 	animation750.pattern3,overlay,754,800,0,0
+	animation750.option,shared-index
 	
 	//Outer eyelids
 	animation501.interval,runonce
@@ -56,6 +59,7 @@ surface2
 	animation700.pattern1,overlay,700,150,0,0
 	animation700.pattern2,overlay,701,0,0,0
 	animation700.pattern3,overlay,701,250,0,0
+	animation700.option,shared-index
 
 	//Hand Right
 	animation750.interval,always
@@ -63,6 +67,7 @@ surface2
 	animation750.pattern1,overlay,750,150,0,0
 	animation750.pattern2,overlay,751,0,0,0
 	animation750.pattern3,overlay,751,250,0,0
+	animation750.option,shared-index
 	
 	//Outer eyelids
 	animation501.interval,runonce
@@ -109,20 +114,19 @@ surface5
 	animation450.pattern1,overlay,401,0,0,0
 	animation450.pattern2,overlay,402,200,0,0
 	animation450.pattern3,overlay,401,200,0,0
+	animation450.option,shared-index
 	
 	//mouth
 	animation30.interval,runonce
 	animation30.pattern0,overlay,551,0,0,0
 	
 	//hand left
-	animation700.interval,always
+	animation700.interval,runonce
 	animation700.pattern0,overlay,703,0,0,0
-	animation700.pattern1,overlay,703,800,0,0
 
 	//hand right
-	animation750.interval,always
+	animation750.interval,runonce
 	animation750.pattern0,overlay,753,0,0,0
-	animation750.pattern1,overlay,753,800,0,0
 }
 
 //Stress flap
@@ -141,7 +145,6 @@ surface6
 		animation401.pattern3,overlay,412,200,0,0
 		animation401.pattern4,overlay,411,200,0,0
 		animation401.pattern5,start,100
-		animation401.option,shared-index
 		
 		//Top right
 		animation402.interval,never
@@ -151,7 +154,6 @@ surface6
 		animation402.pattern3,overlay,422,200,0,0
 		animation402.pattern4,overlay,421,200,0,0
 		animation402.pattern5,start,100
-		animation402.option,shared-index
 		
 		//Bottom left
 		animation403.interval,never
@@ -161,7 +163,6 @@ surface6
 		animation403.pattern3,overlay,432,200,0,0
 		animation403.pattern4,overlay,431,200,0,0
 		animation403.pattern5,start,100
-		animation403.option,shared-index
 
 		//Bottom Right
 		animation404.interval,never
@@ -171,7 +172,6 @@ surface6
 		animation404.pattern3,overlay,432,200,0,0
 		animation404.pattern4,overlay,431,200,0,0
 		animation404.pattern5,start,100
-		animation404.option,shared-index
 	
 	//Hand Left
 	animation700.interval,always
@@ -179,6 +179,7 @@ surface6
 	animation700.pattern1,overlay,700,150,0,0
 	animation700.pattern2,overlay,701,0,0,0
 	animation700.pattern3,overlay,701,250,0,0
+	animation700.option,shared-index
 
 	//Hand Right
 	animation750.interval,always
@@ -186,6 +187,7 @@ surface6
 	animation750.pattern1,overlay,750,150,0,0
 	animation750.pattern2,overlay,751,0,0,0
 	animation750.pattern3,overlay,751,250,0,0
+	animation750.option,shared-index
 	
 	//Outer eyelids
 	animation501.interval,runonce
@@ -335,7 +337,6 @@ surface.append0,1
 		animation400.pattern5,overlay,402,200,0,0
 		animation400.pattern6,overlay,401,200,0,0
 		animation400.pattern7,start,100
-		animation400.option,shared-index
 
 		//Top left
 		animation401.interval,never
@@ -347,7 +348,6 @@ surface.append0,1
 		animation401.pattern5,overlay,412,200,0,0
 		animation401.pattern6,overlay,411,200,0,0
 		animation401.pattern7,start,100
-		animation401.option,shared-index
 		
 		//Top right
 		animation402.interval,never
@@ -359,7 +359,6 @@ surface.append0,1
 		animation402.pattern5,overlay,422,200,0,0
 		animation402.pattern6,overlay,421,200,0,0
 		animation402.pattern7,start,100
-		animation402.option,shared-index
 		
 		//Bottom left
 		animation403.interval,never
@@ -371,7 +370,6 @@ surface.append0,1
 		animation403.pattern5,overlay,432,200,0,0
 		animation403.pattern6,overlay,431,200,0,0
 		animation403.pattern7,start,100
-		animation403.option,shared-index
 
 		//Bottom Right
 		animation404.interval,never
@@ -383,7 +381,6 @@ surface.append0,1
 		animation404.pattern5,overlay,432,200,0,0
 		animation404.pattern6,overlay,431,200,0,0
 		animation404.pattern7,start,100
-		animation404.option,shared-index
 	
 	//Look forward - manual call, stay until surface changes just because it's awkward for it to flick away and then change
 	animation450.interval,never
