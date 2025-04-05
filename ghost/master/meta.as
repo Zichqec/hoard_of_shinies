@@ -1,5 +1,4 @@
-//This file handles a couple little QOL functions you may want, as well as default text for some events since SSP doesn't provide defaults. But these are not necessary! If you don't care for them just erase them. If you don't want to set up network updates, you can comment or remove the update functions too. If you're not interested in any of these, just remove the whole file!
-//If you are interested in expanding on these events, I've included links to their documentation in ukadoc for easy reference
+//I could make some of these talk blocks... but I kind of don't want to mix talk blocks and function blocks too much? I'll think about it...
 
 //—————————————————————————————— Installing something ——————————————————————————————
 //https://ukagakadreamteam.github.io/ukadoc/manual/list_shiori_event.html#OnInstallBegin
@@ -23,7 +22,7 @@ function OnInstallComplete
 
 function OnInstallComplete@Action
 {
-	return `\![{Shiori.Reference[0]},ghost,lastinstalled]`;
+	return `\!["{Shiori.Reference[0]}",ghost,lastinstalled]`;
 }
 
 function OnInstallFailure
