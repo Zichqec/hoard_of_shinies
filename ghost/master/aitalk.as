@@ -159,6 +159,37 @@ talk RandomTalk
 	\0\s[0]There's a spot nearby where the kelp forest gets even thicker. \s[2]Remind me and I'll show you sometime.
 }
 
+talk RandomTalk
+{
+	\s[5]Wow... \w8\s[2]Look look, look behind you, the light is catching on those bubbles just perfectly~!
+}
+
+talk RandomTalk
+{
+	\s[0]I saw {ashark} earlier while I was exploring around {thekelpforest}.
+	
+	\w8\s[1]I kept my distance though, I didn't really want to say hello.
+}
+
+talk RandomTalk
+{
+	\s[0]There's {ashark} that I see off in the distance sometimes when I'm cleaning up the cave entrance.
+	
+	\s[1]Well, I guess I can't say for sure that it's always the same one... \s[1]\i[451]but I feel like it is.
+}
+
+talk RandomTalk
+{
+	\s[1]I think I lost {agoldcoin} on my way back earlier, while I was swimming around {thekelpforest}.
+	
+	\s[6]I'll have to go back and search for it.
+}
+
+talk RandomTalk
+{
+	\s[3]Hehe... hehehe... \w8\s[2]Our collection is coming along so nicely~!
+}
+
 // talk ChainTest if (ChainIndex == 0)
 // {
 	// 0

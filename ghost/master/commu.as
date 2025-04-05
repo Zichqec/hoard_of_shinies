@@ -1,26 +1,15 @@
 function OnSpectrePlugin@ConfirmCalibration
 {
-	return "\![raiseplugin,Spectre,OnCustomCalibrationConfirm,--option=include,normal,embarrassed,smile,surprised]";
+	return "\![raiseplugin,Spectre,OnCustomCalibrationConfirm,--option=include,normal,embarrassed,smile,surprised,discouraged]";
 }
 
 function OnSpectrePlugin@Surface
 {
-	if (Shiori.Reference[0] == "normal")
-	{
-		return "\s[0]";
-	}
-	else if (Shiori.Reference[0] == "embarrassed")
-	{
-		return "\s[1]";
-	}
-	else if (Shiori.Reference[0] == "smile")
-	{
-		return "\s[2]";
-	}
-	else if (Shiori.Reference[0] == "surprised")
-	{
-		return "\s[5]";
-	}
+	if (Shiori.Reference[0] == "normal") { return "\s[0]"; }
+	else if (Shiori.Reference[0] == "embarrassed") { return "\s[1]"; }
+	else if (Shiori.Reference[0] == "smile") { return "\s[2]"; }
+	else if (Shiori.Reference[0] == "surprised") { return "\s[5]"; }
+	else if (Shiori.Reference[0] == "discouraged") { return "\s[6]"; } //It's a bit of a stretch, but... I think it really helps for the dissociated pool
 }
 
 function OnSpectrePlugin@Possession
@@ -86,21 +75,30 @@ talk SpectreTalk_dissociated
 }
 
 //—————————— Needle poking ——————————
-talk OnNeedlePoke
+function OnNeedlePoke
+{
+	if (Shiori.Reference[0] == 0)
+	{
+		return NeedleTalk;
+	}
+	
+}
+
+talk NeedleTalk
 {
 	\s[5]Oh... \s[4]Is this for me?
 	
 	\s[2]Ohhh thank you thank you, so sparkly~!!
 }
 
-talk OnNeedlePoke
+talk NeedleTalk
 {
 	\s[5]Oooh, what's this, what's this?
 	
 	\s[2]Something new, something new~!
 }
 
-talk OnNeedlePoke
+talk NeedleTalk
 {
 	\s[5]Ohh... \s[2]Oh wow, where did you find this? \s[5]It's so shiny...
 	

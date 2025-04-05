@@ -1,5 +1,4 @@
-//This file handles a couple little QOL functions you may want, as well as default text for some events since SSP doesn't provide defaults. But these are not necessary! If you don't care for them just erase them. If you don't want to set up network updates, you can comment or remove the update functions too. If you're not interested in any of these, just remove the whole file!
-//If you are interested in expanding on these events, I've included links to their documentation in ukadoc for easy reference
+//I could make some of these talk blocks... but I kind of don't want to mix talk blocks and function blocks too much? I'll think about it...
 
 //—————————————————————————————— Installing something ——————————————————————————————
 //https://ukagakadreamteam.github.io/ukadoc/manual/list_shiori_event.html#OnInstallBegin
@@ -23,44 +22,19 @@ function OnInstallComplete
 
 function OnInstallComplete@Action
 {
-	if (Shiori.Reference[0] == "change")
-	{
-		return "\![change,ghost,lastinstalled]";
-	}
-	else //call
-	{
-		return "\![call,ghost,lastinstalled]";
-	}
+	return `\!["{Shiori.Reference[0]}",ghost,lastinstalled]`;
 }
 
 function OnInstallFailure
 {
 	local reason = Shiori.Reference[0];
 	
-	if (Shiori.Reference[0] == "unlha32")
-	{
-		reason = "could not load the dll to decompress lzh files";
-	}
-	else if (Shiori.Reference[0] == "extraction")
-	{
-		reason = "failed to decompress the file";
-	}
-	else if (Shiori.Reference[0] == "invalid type")
-	{
-		reason = "the install.txt is incorrect";
-	}
-	else if (Shiori.Reference[0] == "unsupported")
-	{
-		reason = "the archive is not supported";
-	}
-	else if (Shiori.Reference[0] == "password")
-	{
-		reason = "incorrect password";
-	}
-	else if (Shiori.Reference[0] == "artificial")
-	{
-		reason = "canceled by user";
-	}
+	if (Shiori.Reference[0] == "unlha32") { reason = "could not load the dll to decompress lzh files"; }
+	else if (Shiori.Reference[0] == "extraction") { reason = "failed to decompress the file"; }
+	else if (Shiori.Reference[0] == "invalid type") { reason = "the install.txt is incorrect"; }
+	else if (Shiori.Reference[0] == "unsupported") { reason = "the archive is not supported"; }
+	else if (Shiori.Reference[0] == "password") { reason = "incorrect password"; }
+	else if (Shiori.Reference[0] == "artificial") { reason = "canceled by user"; }
 	
 	return "\0\![set,serikotalk,false]Could not complete installation: {reason}.";
 }
@@ -100,13 +74,8 @@ function OnUpdateReady
 	newfiles += 1;
 	
 	//plural checks, adds an s and changes is to are if there's more than 1 file
-	local s = "";
-	local are = "is";
-	if (newfiles != 1)
-	{
-		s = "s";
-		are = "are";
-	}
+	local s = ""; local are = "is";
+	if (newfiles != 1) { s = "s"; are = "are"; }
 	
 	return "\0\![set,serikotalk,false]There {are} {newfiles} new file{s}.\w8";
 }
@@ -129,18 +98,9 @@ function OnUpdateFailure
 {
 	local reason = Shiori.Reference[0];
 	
-	if (Shiori.Reference[0] == "timeout")
-	{
-		reason = "connection timed out";
-	}
-	else if (Shiori.Reference[0] == "md5 miss")
-	{
-		reason = "MD5 error on file {Shiori.Reference[1]}\n\nPlease contact the ghost author for assistance";
-	}
-	else if (Shiori.Reference[0] == "artificial")
-	{
-		reason = "canceled by user";
-	}
+	if (Shiori.Reference[0] == "timeout") { reason = "connection timed out"; }
+	else if (Shiori.Reference[0] == "md5 miss") { reason = "MD5 error on file {Shiori.Reference[1]}\n\nPlease contact the ghost author for assistance"; }
+	else if (Shiori.Reference[0] == "artificial") { reason = "canceled by user"; }
 	
 	return "\0\![set,serikotalk,false]Could not update: {reason}.";
 }
@@ -154,10 +114,7 @@ function OnSNTPCompare
 	if (Shiori.Reference[3] != 0)
 	{
 		local s = "";
-		if (Shiori.Reference[3] != 1)
-		{
-			s = "s";
-		}
+		if (Shiori.Reference[3] != 1) { s = "s"; }
 		
 		output += "\0\![set,serikotalk,false]The clock is off by {Shiori.Reference[3]} second{s}.\n\n";
 		
@@ -189,22 +146,10 @@ function OnBIFFFailure
 {
 	local reason = Shiori.Reference[0];
 	
-	if (Shiori.Reference[0] == "timeout")
-	{
-		reason = "connection timed out";
-	}
-	else if (Shiori.Reference[0] == "kick")
-	{
-		reason = "can't access account";
-	}
-	else if (Shiori.Reference[0] == "defect")
-	{
-		reason = "POP settings incorrect";
-	}
-	else if (Shiori.Reference[0] == "artificial")
-	{
-		reason = "canceled by user";
-	}
+	if (Shiori.Reference[0] == "timeout") { reason = "connection timed out"; }
+	else if (Shiori.Reference[0] == "kick") { reason = "can't access account"; }
+	else if (Shiori.Reference[0] == "defect") { reason = "POP settings incorrect"; }
+	else if (Shiori.Reference[0] == "artificial") { reason = "canceled by user"; }
 
 	return "\0\![set,serikotalk,false]Could not get emails: {reason}.";
 }
@@ -217,14 +162,8 @@ function OnHeadlinesenseFailure
 {
 	local reason = Shiori.Reference[0];
 	
-	if (Shiori.Reference[0] == "can't download")
-	{
-		reason = "can't download the file";
-	}
-	else if (Shiori.Reference[0] == "can't analyze")
-	{
-		reason = "can't analyze the file";
-	}
+	if (Shiori.Reference[0] == "can't download") { reason = "can't download the file"; }
+	else if (Shiori.Reference[0] == "can't analyze") { reason = "can't analyze the file"; }
 
 	return "\0\![set,serikotalk,false]Could not get RSS: {reason}.";
 }

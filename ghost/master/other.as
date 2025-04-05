@@ -9,7 +9,7 @@ function OnTranslate
 
 function AutoPause(talkstr)
 {
-	if (talkstr.IndexOf("\![no-autopause]").IsNull() && talkstr.IndexOf("■Aosora reload completed").IsNull())
+	if (!(FoundInStr(talkstr,"\![no-autopause]") || FoundInStr(talkstr,"■Aosora reload completed")))
 	{
 		talkstr = talkstr.Replace("\x\n[-200]\n\w8\w4\n\w8\w4","\x"); //bandaid patch for firstboot, I'll try to come up with something better later...
 		talkstr = talkstr.Replace(", ",",\w4 ");
@@ -62,18 +62,9 @@ function OnAnchorSelect
 
 function OnKeyPress
 {
-	if (Shiori.Reference[0] == "f1")
-	{
-		return "\![open,readme]";
-	}
-	else if (Shiori.Reference[0] == "t")
-	{
-		return OnStartTalk;
-	}
-	else if (Shiori.Reference[0] == "r")
-	{
-		return OnLastTalk;
-	}
+	if (Shiori.Reference[0] == "f1") { return "\![open,readme]"; }
+	else if (Shiori.Reference[0] == "t") { return OnStartTalk; }
+	else if (Shiori.Reference[0] == "r") { return OnLastTalk; }
 }
 
 function OnSurfaceRestore
@@ -96,37 +87,32 @@ function ghostver
 	return "1.0.1";
 }
 
+//Arg 0: The string to search
+//Arg 1: The substring to search for
+function FoundInStr(str, search)
+{
+	if (!str.IndexOf(search).IsNull()) {return true;}
+	else {return false;}
+}
+
 //—————————————————————————————— Right click menu links ——————————————————————————————
 function FormatLinks(links)
 {
 	local output = "";
 	for (i = 0; i < links.length; i++)
 	{
-		output += links[i];
-		//Alternate between adding  or 
-		if (i % 2 == 1)
-		{
-			output += (2).ToAscii();
-		}
-		else
-		{
-			output += (1).ToAscii();
-		}
+		//Name then 0x01, URL then 0x02
+		output += links[i]["name"] + (1).ToAscii();
+		output += links[i]["url"] + (2).ToAscii();
 	}
 	return output;
 }
 
 function sakura@recommendsites
 {
-	return FormatLinks(recommendsites_sakura());
-}
-
-function recommendsites_sakura
-{
-	return
-	[
-		"Zi's Ukagaka Space", "https://ukagaka.zichqec.com/",
-		"Merfolk May freeshell", "https://ako-kipali.tumblr.com/ghost-stuff",
-		"Aosora SHIORI", "https://github.com/kanadelab/aosora-shiori"
-	];
+	return FormatLinks([
+		{name: "Zi's Ukagaka Space", url: "https://ukagaka.zichqec.com/"},
+		{name: "Merfolk May freeshell", url: "https://ako-kipali.tumblr.com/ghost-stuff"},
+		{name: "Aosora SHIORI", url: "https://github.com/kanadelab/aosora-shiori"}
+	]);
 }
