@@ -2,7 +2,15 @@ function OnMouseDoubleClick
 {
 	if (Shiori.Reference[5] == 0)
 	{
-		return OnSakuraMenu;
+		if (Shiori.Reference[3] == 1)
+		{
+			return IslandBubbling();
+		}
+		else
+		{
+			return OnSakuraMenu;
+		}
+		
 	}
 }
 

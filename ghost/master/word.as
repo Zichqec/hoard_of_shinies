@@ -161,3 +161,17 @@ function crab
 		"squid"
 	]);
 }
+
+function IslandBubbling
+{
+	local output = "";
+	output += Random.Select([
+		"Bubble",
+		"Bloop",
+		"Blop",
+		"Blub",
+		"Burble",
+		"Blup"
+	]);
+	return "\1\f[italic,1]{output}\f[italic,default]";
+}
