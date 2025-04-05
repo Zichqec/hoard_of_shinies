@@ -23,14 +23,7 @@ function OnInstallComplete
 
 function OnInstallComplete@Action
 {
-	if (Shiori.Reference[0] == "change")
-	{
-		return "\![change,ghost,lastinstalled]";
-	}
-	else //call
-	{
-		return "\![call,ghost,lastinstalled]";
-	}
+	return `\![{Shiori.Reference[0]},ghost,lastinstalled]`;
 }
 
 function OnInstallFailure
