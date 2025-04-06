@@ -11,7 +11,6 @@ function AutoPause(talkstr)
 {
 	if (!(FoundInStr(talkstr,"\![no-autopause]") || FoundInStr(talkstr,"■Aosora reload completed")))
 	{
-		talkstr = talkstr.Replace("\x\n[-200]\n\w8\w4\n\w8\w4","\x"); //bandaid patch for firstboot, I'll try to come up with something better later...
 		talkstr = talkstr.Replace(", ",",\w4 ");
 		talkstr = talkstr.Replace(". ",".\w8\w8 ");
 		talkstr = talkstr.Replace("~ ","~\w8\w8 ");
