@@ -2,13 +2,13 @@ talk OnFirstBoot
 {
 	\1\s[10]\![set,alignmenttodesktop,bottom]\0{RandomizeDressups()}\s[9]\b[0]Hmm-hmm... Hmm-hmm...\w8\w8\w8\w8
 	
-	\s[0]\i[450]Oh! \s[4]{username}, you made it! \s[2]Come on come on come on, come look and see the new cave!\x\n[-200]
+	\s[0]\i[450]Oh! \s[4]{username}, you made it! \s[2]Come on come on come on, come look and see the new cave!
 	
-	\s[0]Hehe... hehehe... \w8\w8\s[3]It's great, isn't it? \s[0]There's so much space for all our shinies!
+	\x\s[0]Hehe... hehehe... \w8\w8\s[3]It's great, isn't it? \s[0]There's so much space for all our shinies!
 	
-	\s[1]I um, I got kind of excited and moved everything over already... Sorry for not giving you more of a heads up.\x\n[-200]
+	\s[1]I um, I got kind of excited and moved everything over already... Sorry for not giving you more of a heads up.
 	
-	\s[2]But! Look at it! There's SO MUCH room here!! \s[0]I can't wait to find all sorts of new treasures and fill up these little alcoves.
+	\x\s[2]But! Look at it! There's SO MUCH room here!! \s[0]I can't wait to find all sorts of new treasures and fill up these little alcoves.
 	
 	\s[0]\i[450]But you'll wanna have a look around first to get used to it, right? \s[4]Right! \s[0]Let's hang out here for a while then, I can wait.
 }
