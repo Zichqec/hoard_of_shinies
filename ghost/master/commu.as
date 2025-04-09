@@ -198,3 +198,41 @@ talk NeedleTalk
 	
 	\s[2]Hehe, I don't know what it is, but it's shiny so it belongs in our collection~!
 }
+
+
+//—————————— zzzzzzzzz sleeping ——————————
+talk OnPhantaEepy
+{
+	\s[0]I feel a little... \![set,balloonwait,1.7]sleepy...
+	
+	\![set,balloonwait,2.5]\s[9]Z z z...
+}
+
+talk OnPhantaEepy
+{
+	\s[9]\![set,balloonwait,2.5]... Z z z...
+}
+
+talk OnPhantaEepy
+{
+	\s[1]Oh... \![set,balloonwait,1.7]I suddenly feel a nap coming on...
+	
+	\![set,balloonwait,2.5]\s[9]Z z z...
+}
+
+
+//—————————— LOBO howling ——————————
+talk OnLoboHowl
+{
+	\s[5]Oh... \s[2]I hear whalesong, today must be a lucky day~!
+}
+
+talk OnLoboHowl
+{
+	\s[5]Oooh... \s[4]{username}, {username}, can you hear that? \s[3]There must be a whale somewhere nearby~!
+}
+
+talk OnLoboHowl
+{
+	\s[5]Ohh, do you hear that? \s[3]I love listening to the whales sing...
+}
