@@ -236,3 +236,168 @@ talk OnLoboHowl
 {
 	\s[5]Ohh, do you hear that? \s[3]I love listening to the whales sing...
 }
+
+
+
+//test...
+function OnMicaSong
+{
+	
+}
+
+function OnMicaSingRoundStart
+{
+	output = "";
+	//Get a list of ghosts that will sing with her
+	local participants = [];
+	local byte1 = (1).ToAscii;
+	for (local i = 0; i < OpenGhosts.length; i++)
+	{
+		local ghost = OpenGhosts[i];
+		ghost = ghost.Split("{byte1}")[0];
+		participants.Add(ghost);
+		output += "\![raiseother,{ghost},OnMicaSingRoundCheck]";
+	}
+	
+	//Shuffle the array
+	MicaSongParticipants = [];
+	while (participants.length > 0)
+	{
+		local num = Random.GetIndex(0,participants.length);
+		MicaSongParticipants.Add(participants[num]);
+		participants.Remove(num);
+	}
+	
+	MicaSongChoice = "test";
+	MicaSongLength = Reflection.Get("MicaSongRound@{MicaSongChoice}").length;
+	MicaSongPos = 0;
+	
+	output += "blah blah getting ready... ok!\x\![raise,OnMicaSingRoundControl,0]";
+	
+	return output;
+}
+
+function OnMicaSingRoundControl
+{
+	local lyrics = "";
+	lyrics = Reflection.Get("MicaSongRound@{MicaSongChoice}")();
+	local output = "";
+	local currentlinenum = Shiori.Reference[0].ToNumber();
+	if (Shiori.Reference[1] != -1) //If the song is not over
+	{
+		output += "{lyrics[currentlinenum]}";
+		output += "\_w[2000]";
+	}
+	else
+	{
+		output += "\C\_w[3000]";
+	}
+	currentlinenum++;
+	
+	
+	Debug.WriteLine("");
+	Debug.WriteLine("MicaSongParticipants.length: {MicaSongParticipants.length}");
+	local othersoutput = "";
+	for (local i = 0; i < MicaSongParticipants.length; i++)
+	{
+		local relativepos = currentlinenum - i - 1;
+		Debug.WriteLine("relativepos: {relativepos}");
+		Debug.WriteLine("lyrics.length: {lyrics.length}");
+		if (!(relativepos < 0 || relativepos >= lyrics.length))
+		{
+			othersoutput += `\![raiseother,"{MicaSongParticipants[i]}",OnMicaSingRound,"{lyrics[relativepos]}",{relativepos},{lyrics.length}]`;
+		}
+	}
+	local othersdone = 0;
+	if (othersoutput == "")
+	{
+		othersdone = 1;
+	}
+	Debug.WriteLine("othersdone: {othersdone}");
+	Debug.WriteLine("othersoutput: {othersoutput}");
+	output += othersoutput;
+	
+	if (currentlinenum >= lyrics.length) //Reached the end
+	{
+		if (!othersdone)
+		{
+			output += "\![raise,OnMicaSingRoundControl,{currentlinenum},-1]";
+		}
+		else
+		{
+			return OnMicaSongRoundEndControl(MicaSongChoice);
+		}
+	}
+	else
+	{
+		output += "\![raise,OnMicaSingRoundControl,{currentlinenum},{currentlinenum}]";
+	}
+	
+	return output;
+}
+
+function MicaSongRound@test
+{
+	return [
+	"Test test little merfolk, test your dialogue~",
+	"Test test wiggle waggle, it's a tester song~",
+	"Wiggle wiggle, squirm squirm squirm~",
+	"Wiggle wiggle, avoid the worms~",
+	"Test test little merfolk, test your song~",
+	];
+}
+
+function OnMicaSongRoundEndControl
+{
+	local command = "\_w[3000]";
+	for (local i = 0; i < MicaSongParticipants.length; i++)
+	{
+		command += `\![raiseother,{MicaSongParticipants[i]},OnMicaSongRoundEnd]`;
+	}
+	return command + MicaSongRoundEnd();
+}
+
+talk MicaSongRoundEnd
+{
+	\s[2]Yay!!
+}
+
+// function OnMicaSingRoundPrepare
+// {
+	// output = "\_qparticipants:\n\n";
+	// for (local i = 0; i < MicaSongParticipants.length; i++)
+	// {
+		// output += MicaSongParticipants[i];
+		// output += "\n";
+	// }
+	// return output;
+// }
+
+// function OnMicaSingRound
+// {
+	// output = "\_qparticipants:\n\n";
+	// for (local i = 0; i < MicaSongParticipants.length; i++)
+	// {
+		// output += MicaSongParticipants[i];
+		// output += "\n";
+	// }
+	// return output;
+// }
+
+function OnRaiseOtherFailure
+{
+	for (local i = 0; i < MicaSongParticipants.length; i++)
+	{
+		if (MicaSongParticipants[i] == Shiori.Reference[1])
+		{
+			MicaSongParticipants.Remove(i);
+			break;
+		}
+	}
+	Debug.WriteLine("Failed: {Shiori.Reference[0]} - {Shiori.Reference[1]}");
+}
+
+function otherghostname
+{
+	OpenGhosts = Shiori.Reference;
+}
