@@ -200,6 +200,17 @@ function thecliffs
 	]);
 }
 
+function metalgem
+{
+	return Random.Select([
+		"precious metal",
+		"gemstone",
+		"shell",
+		"coral",
+		"fish"
+	]);
+}
+
 function IslandBubbling
 {
 	local output = "";

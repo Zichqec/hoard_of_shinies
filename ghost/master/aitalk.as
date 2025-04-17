@@ -233,3 +233,26 @@ talk RandomTalk
 	
 	\s[2]Seems his collection is growing too~!
 }
+
+talk RandomTalk
+{
+	\s[0]I wonder what it'll look like when this place is completely filled...
+	
+	\s[2]Sparkly, that's for sure, hehe~!
+}
+
+talk RandomTalk
+{
+	\s[0]I'm thinking about starting to put down shells around the cave entrance to form a pattern.
+	
+	\s[6]I can't decide on a pattern though, so I've just been collecting every nice shell I see...
+}
+
+talk RandomTalk
+{
+	\s[0]Someone asked me what my favorite kind of {metalgem} is. \s[1]I couldn't decide, so I said:
+	
+	\s[5]... All of them... \w8\w8
+	
+	\s[6]They didn't like that answer.
+}
