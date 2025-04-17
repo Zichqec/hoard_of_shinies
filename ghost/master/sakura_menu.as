@@ -43,13 +43,13 @@ function OnSakuraMenu
 	{
 		local time = times[i];
 		
-		if (time["interval"] == Save.Data.TalkInterval)
+		if (time.interval == Save.Data.TalkInterval)
 		{
-			output += `\_a[OnChangeTalkrate,{time["interval"]}]{time["label"]}\_a  `;
+			output += `\_a[OnChangeTalkrate,{time.interval}]{time.label}\_a  `;
 		}
 		else
 		{
-			output += `\__q[OnChangeTalkrate,{time["interval"]}]{time["label"]}\__q  `;
+			output += `\__q[OnChangeTalkrate,{time.interval}]{time.label}\__q  `;
 		}
 	}
 	output += "\n\n";
