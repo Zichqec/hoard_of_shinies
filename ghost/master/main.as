@@ -17,9 +17,6 @@ function OnAosoraLoad
 	ChainName = "";
 	ChainIndex = 0;
 	ChainEnd = 0;
-	OpenGhosts = [];
-	MicaSongChoice = "";
-	MicaSongParticipants = [];
 }
 
 function OnBoot()
