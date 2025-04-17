@@ -190,6 +190,50 @@ talk RandomTalk
 	\s[3]Hehe... hehehe... \w8\s[2]Our collection is coming along so nicely~!
 }
 
+talk RandomTalk
+{
+	\s[1]Sometimes I wish the market wasn't so far away.
+	
+	\s[0]But then again, if it were closer then our stash would be way more likely to be discovered, wouldn't it?
+	
+	\s[2]This is a good spot, I'm glad we explored out this far.
+}
+
+talk RandomTalk
+{
+	\s[0]I heard a good tip earlier; apparently someone brought in an old chest that has a rusted lock, and nobody's been able to get into it.
+	
+	\s[2]Sounds like the perfect job for Mica~!
+}
+
+talk RandomTalk
+{
+	\s[0]I found a bunch of pebbles in the kelp forest arranged in the shape of {afish}.
+	
+	\s[2]It was really neat, I wonder who made it?
+}
+
+talk RandomTalk
+{
+	\s[5]Oh yeah, I wanted to tell you. \s[3]I found a really cool rock with {afish} design scratched into it!
+	
+	\s[2]I'll take you to see it next time we're out around {thecliffs}~!
+}
+
+talk RandomTalk
+{
+	\s[0]Do you think the others would be impressed with our collection?
+	
+	\s[1]I wouldn't risk showing it to them, of course, \w4\s[2]but sometimes I like to imagine seeing the envy on their faces!
+}
+
+talk RandomTalk
+{
+	\s[0]Have you seen the new flag old man Rodger got? He has it displayed above his stall at the market.
+	
+	\s[2]Seems his collection is growing too~!
+}
+
 // talk ChainTest if (ChainIndex == 0)
 // {
 	// 0

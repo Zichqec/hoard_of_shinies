@@ -41,7 +41,8 @@ function aruby
 		"an opal",
 		"an amethyst",
 		"a topaz",
-		"an amber"
+		"an amber",
+		"a diamond"
 	]);
 }
 
@@ -53,7 +54,8 @@ function rubies
 		"garnets",
 		"emeralds",
 		"amethysts",
-		"topaz"
+		"topaz",
+		"diamonds"
 	]);
 }
 
@@ -73,7 +75,9 @@ function necklace
 		"necklace",
 		"ring",
 		"bracelet",
-		"brooch"
+		"brooch",
+		"circlet",
+		"earring"
 	]);
 }
 
@@ -159,6 +163,40 @@ function crab
 		"lobster",
 		"octopus",
 		"squid"
+	]);
+}
+
+function afish
+{
+	return Random.Select([
+		"a fish",
+		"a crab",
+		"a squid",
+		"a lobster",
+		"an octopus",
+		"an eel",
+		"a ray",
+		"a shark",
+		"a whale",
+		"a scallop shell",
+		"a conch shell",
+		"a kelp leaf",
+		"a rock",
+		"a seasnail",
+		"a seahorse"
+	]);
+}
+
+//It's like thekelpforest but the grammar is a bit different...
+function thecliffs
+{
+	return Random.Select([
+		"the cliffs",
+		"those big rocks on the other side of the kelp forest",
+		"the outskirts of town",
+		"the reef",
+		"that old shipwreck, the one that was full of crabs when we first explored it",
+		"the bay"
 	]);
 }
 
