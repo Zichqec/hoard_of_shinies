@@ -233,18 +233,3 @@ talk RandomTalk
 	
 	\s[2]Seems his collection is growing too~!
 }
-
-// talk ChainTest if (ChainIndex == 0)
-// {
-	// 0
-// }
-
-// talk ChainTest if (ChainIndex == 1)
-// {
-	// 1
-// }
-
-// talk ChainTest if (ChainIndex == 2)
-// {
-	// 2
-// }

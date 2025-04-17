@@ -14,9 +14,6 @@ function OnAosoraLoad
 	TalkBuilder.Default.AutoLineBreak = "\n\w8\w4";
 	
 	LastTalk = "";
-	ChainName = "";
-	ChainIndex = 0;
-	ChainEnd = 0;
 }
 
 function OnBoot()

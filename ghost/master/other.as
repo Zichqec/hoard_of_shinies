@@ -25,32 +25,9 @@ function AutoPause(talkstr)
 
 function OnStartTalk
 {
-	if (ChainName != "")
-	{
-		LastTalk = Reflection.Get("{ChainName}")();
-		
-		ChainIndex++;
-		if (ChainIndex >= ChainEnd)
-		{
-			ChainName = "";
-			ChainIndex = 0;
-			ChainEnd = 0;
-		}
-	}
-	else
-	{
-		LastTalk = Reflection.Get("RandomTalk")();
-	}
+	LastTalk = Reflection.Get("RandomTalk")();
 	return LastTalk;
 }
-
-function OnStartChain
-{
-	ChainName = Shiori.Reference[0];
-	ChainIndex = 0;
-	ChainEnd = Reflection.Get("{ChainName}").length;
-}
-
 function OnAnchorSelect
 {
 	if (Shiori.Reference[0].StartsWith("http://") || Shiori.Reference[0].StartsWith("https://"))
