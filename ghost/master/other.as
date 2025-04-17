@@ -126,7 +126,9 @@ function getaistate
 		{name: "SpectreTalk_miserable", val: SpectreTalk_miserable.length},
 		{name: "SpectreTalk_dissociated", val: SpectreTalk_dissociated.length},
 		{name: "SpectreTalk_spooky", val: SpectreTalk_spooky.length},
-		{name: "NeedleTalk", val: NeedleTalk.length}
+		{name: "NeedleTalk", val: NeedleTalk.length},
+		{name: "OnPhantaEepy", val: OnPhantaEepy.length},
+		{name: "OnLoboHowl", val: OnLoboHowl.length},
 	];
 	
 	local labels = "";
