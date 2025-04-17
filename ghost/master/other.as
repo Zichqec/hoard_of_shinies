@@ -60,7 +60,7 @@ function homeurl
 
 function ghostver
 {
-	return "1.0.2";
+	return "1.0.3";
 }
 
 //Arg 0: The string to search
