@@ -224,3 +224,15 @@ function IslandBubbling
 	]);
 	return "\1\f[italic,1]{output}\f[italic,default]";
 }
+
+function forks
+{
+	return Random.Select([
+		"forks",
+		"necklaces",
+		"scraps",
+		"rings",
+		"clasps",
+		"brooches"
+	]);
+}
