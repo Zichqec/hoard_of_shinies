@@ -23,11 +23,20 @@ function AutoPause(talkstr)
 	return talkstr;
 }
 
+//Call coming from menu, or hotkey
 function OnStartTalk
+{
+	LastTalk = TalkTimer.CallRandomTalk();
+	return LastTalk;
+}
+
+//Call coming from TalkTimer or \a tag
+function OnAITalk
 {
 	LastTalk = Reflection.Get("RandomTalk")();
 	return LastTalk;
 }
+
 function OnAnchorSelect
 {
 	if (Shiori.Reference[0].StartsWith("http://") || Shiori.Reference[0].StartsWith("https://"))
