@@ -256,3 +256,28 @@ talk RandomTalk
 	
 	\s[6]They didn't like that answer.
 }
+
+talk OnRandomTalk
+{
+	%{ TalkTimer.RandomTalkQueue = [Chain_Reorganizing1, Chain_Reorganizing2]; }
+	\s[0]I think I want to reorganize these ledges over here. I'm thinking it would be nicer if I moved all those {forks} to the next ledge up so that they're closer to the {rubies}.
+}
+
+talk Chain_Reorganizing1
+{
+	\s[1]Oh, but if I do that, then they're too close to this {metal} collection...
+}
+
+talk Chain_Reorganizing1
+{
+	\s[1]Oh, but then the light wouldn't hit them the same way, that would be a shame...
+}
+
+talk Chain_Reorganizing2
+{
+	\s[1].\w8.\w8. \w8\w8Hmm.
+	
+	\s[6]Ohh, I don't know, and now I'm getting stressed about it.
+	
+	\s[1]I'll just leave them be for now and think about it later...
+}
