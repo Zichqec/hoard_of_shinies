@@ -71,6 +71,15 @@ function FoundInStr(str, search)
 	else {return false;}
 }
 
+function Capitalize(word)
+{
+	local firstlet = word.Substring(0,1);
+	local rest = word.Substring(1);
+	
+	return firstlet.ToUpper() + rest;
+}
+
+
 //—————————————————————————————— Right click menu links ——————————————————————————————
 function FormatLinks(links)
 {
