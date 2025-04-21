@@ -257,7 +257,8 @@ talk RandomTalk
 	\s[6]They didn't like that answer.
 }
 
-talk OnRandomTalk
+//Chain dialogue, with a bonus middle variation
+talk RandomTalk
 {
 	%{ TalkTimer.RandomTalkQueue = [Chain_Reorganizing1, Chain_Reorganizing2]; }
 	\s[0]I think I want to reorganize these ledges over here. I'm thinking it would be nicer if I moved all those {forks} to the next ledge up so that they're closer to the {rubies}.
@@ -280,4 +281,26 @@ talk Chain_Reorganizing2
 	\s[6]Ohh, I don't know, and now I'm getting stressed about it.
 	
 	\s[1]I'll just leave them be for now and think about it later...
+}
+
+//Dialogue with two possible endings
+talk RandomTalk
+{
+	\s[0]Sometimes when I stop by old man Rodger's stall at the market, he tells me stories about the things he's seen.
+	
+	>RodgerStory
+}
+
+talk RodgerStory
+{
+	\s[5]He once told me he witnessed a huge ship sinking... \s[1]but it sunk into a deep part of the ocean where we don't go.
+	
+	\s[0]I wonder what's down there sometimes. Do you think there are others like us...?
+}
+
+talk RodgerStory
+{
+	\s[5]He says when he was young he explored oceans far away from here... \s[0]The kind of places you only hear of in legend.
+	
+	\s[2]It sounds so exciting! \s[1]I think it would take a lot of bravery to go that far.
 }
