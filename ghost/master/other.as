@@ -9,7 +9,7 @@ function OnTranslate
 
 function AutoPause(talkstr)
 {
-	if (!(FoundInStr(talkstr,"\![no-autopause]") || FoundInStr(talkstr,"■Aosora reload completed")))
+	if (!(talkstr.Contains("\![no-autopause]") || talkstr.Contains("■Aosora reload completed")))
 	{
 		talkstr = talkstr.Replace(", ",",\w4 ");
 		talkstr = talkstr.Replace(". ",".\w8\w8 ");
@@ -70,14 +70,6 @@ function homeurl
 function ghostver
 {
 	return "1.0.2";
-}
-
-//Arg 0: The string to search
-//Arg 1: The substring to search for
-function FoundInStr(str, search)
-{
-	if (!str.IndexOf(search).IsNull()) {return true;}
-	else {return false;}
 }
 
 function Capitalize(word)
