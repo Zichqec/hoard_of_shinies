@@ -9,7 +9,7 @@ function OnTranslate
 
 function AutoPause(talkstr)
 {
-	if (!(FoundInStr(talkstr,"\![no-autopause]") || FoundInStr(talkstr,"■Aosora reload completed")))
+	if (!(talkstr.Contains("\![no-autopause]") || talkstr.Contains("■Aosora reload completed")))
 	{
 		talkstr = talkstr.Replace(", ",",\w4 ");
 		talkstr = talkstr.Replace(". ",".\w8\w8 ");
@@ -23,11 +23,20 @@ function AutoPause(talkstr)
 	return talkstr;
 }
 
+//Call coming from menu, or hotkey
 function OnStartTalk
+{
+	LastTalk = TalkTimer.CallRandomTalk();
+	return LastTalk;
+}
+
+//Call coming from TalkTimer or \a tag
+function OnAITalk
 {
 	LastTalk = Reflection.Get("RandomTalk")();
 	return LastTalk;
 }
+
 function OnAnchorSelect
 {
 	if (Shiori.Reference[0].StartsWith("http://") || Shiori.Reference[0].StartsWith("https://"))
@@ -60,16 +69,18 @@ function homeurl
 
 function ghostver
 {
-	return "1.0.3";
+	return "1.0.4";
 }
 
-//Arg 0: The string to search
-//Arg 1: The substring to search for
-function FoundInStr(str, search)
+function Capitalize(word)
 {
-	if (!str.IndexOf(search).IsNull()) {return true;}
-	else {return false;}
+	word = "{word}";
+	local firstlet = word.Substring(0,1);
+	local rest = word.Substring(1);
+	
+	return firstlet.ToUpper() + rest;
 }
+
 
 //—————————————————————————————— Right click menu links ——————————————————————————————
 function FormatLinks(links)
