@@ -283,7 +283,7 @@ talk Chain_Reorganizing2
 	\s[1]I'll just leave them be for now and think about it later...
 }
 
-//Dialogue with two possible endings
+//Dialogue with multiple possible endings
 talk RandomTalk
 {
 	\s[0]Sometimes when I stop by old man Rodger's stall at the market, he tells me stories about the things he's seen.
@@ -303,4 +303,35 @@ talk RodgerStory
 	\s[5]He says when he was young he explored oceans far away from here... \s[0]The kind of places you only hear of in legend.
 	
 	\s[2]It sounds so exciting! \s[1]I think it would take a lot of bravery to go that far.
+}
+
+talk RodgerStory
+{
+	%{local lcrab = crab();}
+	\s[5]Sometimes he tells me about this gigantic {lcrab} he saw on one of his adventures...
+	
+	\s[2]I think the {lcrab} gets bigger every time he tells the story, hehe~!
+}
+
+talk RandomTalk
+{
+	\s[3]I caught a tasty fish out by {thekelpforest}.
+	
+	\s[0]Where there's one there's more, so maybe we should try hunting there soon~
+}
+
+talk RandomTalk
+{
+	\s[1]I keep changing my mind about where I want these {rubies}.
+	
+	\s[6]So many options, how to choose the best one...!
+}
+
+talk RandomTalk
+{
+	\s[1]I've made kind of a mess of one of the alcoves towards the back.
+	
+	\s[0]I started stashing stuff there until I had time to sort through it all, but since then I've been so busy rearranging things out here that I haven't gotten to it...
+	
+	\s[6]I'll work on it eventually.
 }
