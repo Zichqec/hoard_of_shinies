@@ -74,6 +74,7 @@ function ghostver
 
 function Capitalize(word)
 {
+	word = "{word}";
 	local firstlet = word.Substring(0,1);
 	local rest = word.Substring(1);
 	

@@ -29,7 +29,7 @@ talk BootTalk
 	
 	\s[0]\i[450]Hmm? \w8\s[4]Oh, {username}! \s[1]Ahh, sorry, I meant to clean up in here but then I just got SO sleepy...
 	
-	\s[0]But nevermind that, come check out what I found earlier! \s[3]{Capitalize(agoldcoin())}! Isn't it great?
+	\s[0]But nevermind that, come check out what I found earlier! \s[3]{Capitalize(agoldcoin)}! Isn't it great?
 }
 
 talk BootTalk
