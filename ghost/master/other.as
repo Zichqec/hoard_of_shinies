@@ -69,7 +69,7 @@ function homeurl
 
 function ghostver
 {
-	return "1.0.2";
+	return "1.0.4";
 }
 
 function Capitalize(word)
