@@ -1,6 +1,6 @@
 talk OnFirstBoot
 {
-	\1\s[10]\![set,alignmenttodesktop,bottom]\0{RandomizeDressups()}\s[9]\b[0]Hmm-hmm... Hmm-hmm...\w8\w8\w8\w8
+	\t\*\1\s[10]\![set,alignmenttodesktop,bottom]\0{RandomizeDressups}\s[9]\b[0]Hmm-hmm... Hmm-hmm...\w8\w8\w8\w8
 	
 	\s[0]\i[450]Oh! \s[4]{username}, you made it! \s[2]Come on come on come on, come look and see the new cave!
 	

@@ -20,7 +20,7 @@ function OnBoot()
 {
 	Save.Data.SpecialClose.Clear();
 	
-	return "\1\s[10]\![set,alignmenttodesktop,bottom]\0{RandomizeDressups()}\s[0]" + BootTalk();
+	return "\1\s[10]\![set,alignmenttodesktop,bottom]\0{RandomizeDressups}\s[0]" + BootTalk();
 }
 
 function RandomizeDressups
