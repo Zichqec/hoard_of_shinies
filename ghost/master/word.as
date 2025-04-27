@@ -183,7 +183,8 @@ function afish
 		"a kelp leaf",
 		"a rock",
 		"a seasnail",
-		"a seahorse"
+		"a seahorse",
+		"a turtle",
 	]);
 }
 
