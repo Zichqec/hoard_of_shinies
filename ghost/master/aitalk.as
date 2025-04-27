@@ -354,7 +354,7 @@ talk RandomTalk
 {
 	\s[0]I still haven't decided what to do about that big anchor we found. \s[1]It would be a really cool piece for our collection, but...
 	
-	\s[6]If we hire help to move it then we have to give out the location of our stash. \s[1]But we can't move our stash to it either, it's a completely exposed area with nowhere good to hide.
+	\s[6]If we hire help to move it then we have to give out the location of our stash. \s[1]We can't move our stash to it either, it's a completely exposed area with nowhere good to hide.
 	
 	Hmm...
 }
@@ -366,9 +366,9 @@ talk RandomTalk
 
 talk RandomTalk
 {
-	\s[1]Sometimes I get excited and swim too fast through here. Then that knocks something down, so I have to swim to catch it...
+	\s[1]Sometimes I get excited and swim too fast through here. I end up knocking something down, so then I have to swim to catch it...
 	
-	\s[6]And that makes something else fall down, and then...
+	\s[6]And that makes something else fall down, so I go to catch that, and then...
 	
 	\s[1]\i[450]... And then I have a lot of work to do.\s[1]
 }
