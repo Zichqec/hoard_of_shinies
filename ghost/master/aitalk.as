@@ -335,3 +335,40 @@ talk RandomTalk
 	
 	\s[6]I'll work on it eventually.
 }
+
+talk RandomTalk
+{
+	\s[0]Hehehe... \s[4]Nothing beats that tingly feeling moments before you open up a treasure chest and discover what's inside.
+	
+	\s[2]We should go out hunting for treasure soon~!
+}
+
+talk RandomTalk
+{
+	\s[0]Whenever I'm at the market I try to make some time to see what other merfolk have made out of coral.
+	
+	\s[2]I'm always glad I did. So many pretty pieces~!
+}
+
+talk RandomTalk
+{
+	\s[0]I still haven't decided what to do about that big anchor we found. \s[1]It would be a really cool piece for our collection, but...
+	
+	\s[6]If we hire help to move it then we have to give out the location of our stash. \s[1]But we can't move our stash to it either, it's a completely exposed area with nowhere good to hide.
+	
+	Hmm...
+}
+
+talk RandomTalk
+{
+	\s[0].\w8.\w8. \w8\w8 \s[6]Hmm... \w8Where did that {metal} {necklace} get to now...?
+}
+
+talk RandomTalk
+{
+	\s[1]Sometimes I get excited and swim too fast through here. Then that knocks something down, so I have to swim to catch it...
+	
+	\s[6]And that makes something else fall down, and then...
+	
+	\s[1]\i[450]... And then I have a lot of work to do.\s[1]
+}
