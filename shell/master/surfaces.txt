@@ -215,9 +215,8 @@ surface9
 	animation1.pattern4,overlay,301,2000,0,0
 	
 	//Outer eyelid
-	animation501.interval,always
+	animation501.interval,runonce
 	animation501.pattern0,overlay,500,0,0,0
-	animation501.pattern1,overlay,500,200,0,0
 	
 	//mouth
 	animation30.interval,always
@@ -235,15 +234,12 @@ surface9
 	animation800.pattern4,overlay,-1,100,0,0
 	
 	//hand left
-	animation700.interval,always
+	animation700.interval,runonce
 	animation700.pattern0,overlay,703,0,0,0
-	animation700.pattern1,overlay,703,800,0,0
 
 	//hand right
-	animation750.interval,always
+	animation750.interval,runonce
 	animation750.pattern0,overlay,753,0,0,0
-	animation750.pattern1,overlay,753,800,0,0
-
 }
 
 //Fin flips - normal
