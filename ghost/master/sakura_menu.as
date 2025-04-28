@@ -23,7 +23,7 @@ function OnSakuraMenu
 	else output += "\0\b[0]";
 	
 	//Beach day gone wrong is one I'm including as a standard balloon, and it starts typing from the bottom, so it actually needs autoscroll...
-	if (CurrentBalloonName != "Beach Day Gone Wrong") { output += "\![set,autoscroll,disable]"; }
+	if (CurrentBalloonName != "Beach Day Gone Wrong") output += "\![set,autoscroll,disable]";
 	
 	output += "\![quicksection,true]\![no-autopause]";
 	
