@@ -4,6 +4,7 @@ function OnAosoraDefaultSaveData
 	Save.Data.TalkInterval = 180;
 	Save.Data.Username = "friend";
 	Save.Data.SpecialClose = []; //Don't really want to save this but it's QOL for me who reloads a lot...
+	Save.Data.ReducedMotion = 0;
 }
 
 //Values to be set upon loading
