@@ -236,3 +236,31 @@ talk OnLoboHowl
 {
 	\s[5]Ohh, do you hear that? \s[3]I love listening to the whales sing...
 }
+
+
+//—————————— Squid booting ——————————
+function OnOtherGhostBooted, OnGhostCallComplete if(Shiori.Reference[0] == "Squid")
+{
+	return SquidBootTalk;
+}
+
+talk SquidBootTalk
+{
+	\s[5]... \w8\w8\s[2]{username}, look, look over there! \s[5]There's a squid...
+	
+	\s[4]So pretty~!
+}
+
+talk SquidBootTalk
+{
+	\s[5]... \w8\w8{username}, do you see that squid over there?
+	
+	\s[4]Look look, before it swims away~!
+}
+
+talk SquidBootTalk
+{
+	\s[5]... A squid. \s[2]{username}, I see a squid over there, look...!
+	
+	\s[5]So pretty... \s[4]I wish I could change colors like that.
+}
