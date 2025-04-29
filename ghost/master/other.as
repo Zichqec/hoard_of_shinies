@@ -102,6 +102,16 @@ function emdash
 	return "\f[name,calibri]—\f[name,default]";
 }
 
+function otherghostname
+{
+	OpenGhosts = [];
+	for (local i = 0; i < Shiori.Reference.length; i++)
+	{
+		local split = Shiori.Reference[i].Split("{(1).ToAscii()}");
+		OpenGhosts.Add(split[0]);
+	}
+}
+
 
 //—————————————————————————————— Right click menu links ——————————————————————————————
 function FormatLinks(links)

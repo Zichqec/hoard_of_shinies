@@ -14,6 +14,11 @@ function OnAosoraLoad
 	TalkTimer.RandomTalkIntervalSeconds = Save.Data.TalkInterval;
 	TalkBuilder.Default.AutoLineBreak = "\n\w8\w4";
 	
+	OpenGhosts = [];
+	MicaSongChoice = "";
+	MicaSongParticipants = [];
+	MicaSongNonParticipants = [];
+	
 	LastTalk = "";
 }
 
