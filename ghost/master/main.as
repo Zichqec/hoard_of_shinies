@@ -13,6 +13,7 @@ function OnAosoraLoad
 	TalkTimer.RandomTalk = OnAITalk;
 	TalkTimer.RandomTalkIntervalSeconds = Save.Data.TalkInterval;
 	TalkBuilder.Default.AutoLineBreak = "\n\w8\w4";
+	TalkBuilder.Default.Head = "\0\b[0]";
 	
 	LastTalk = "";
 }
