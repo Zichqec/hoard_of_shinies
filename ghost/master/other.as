@@ -33,6 +33,7 @@ function AutoPause(talkstr)
 //Call coming from menu, or hotkey
 function OnStartTalk
 {
+	LastTalk = TalkTimer.CallRandomTalk();
 	return LastTalk;
 }
 
