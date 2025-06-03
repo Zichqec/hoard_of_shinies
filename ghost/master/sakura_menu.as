@@ -19,7 +19,7 @@ function OnSakuraMenu
 	local output = "";
 	
 	//Ocean Fishies, annoyingly, doesn't have quite a big enough small size to fit the whole menu...
-	if (CurrentBalloonName == "Ocean Fishies") output += "\0\b[2]";
+	if (CurrentBalloonName == "Ocean Fishies" || CurrentBalloonName == "Beach Day Gone Wrong") output += "\0\b[2]";
 	else output += "\0\b[0]";
 	
 	//Beach day gone wrong is one I'm including as a standard balloon, and it starts typing from the bottom, so it actually needs autoscroll...
@@ -55,7 +55,7 @@ function OnLastTalk
 function OnSettings
 {
 	output = "\1\s[10]";
-	if (CurrentBalloonName == "Ocean Fishies") output += "\0\b[2]";
+	if (CurrentBalloonName == "Ocean Fishies" || CurrentBalloonName == "Beach Day Gone Wrong") output += "\0\b[2]";
 	else output += "\0\b[0]";
 	if (CurrentBalloonName != "Beach Day Gone Wrong") output += "\![set,autoscroll,disable]";
 	output += "\s[0]\![quicksection,1]\![no-autopause]";
