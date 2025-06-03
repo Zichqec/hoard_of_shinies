@@ -113,20 +113,20 @@ function OnBalloonColorMenu
 	for (local i = 0; i < LeftCol.length; i++)
 	{
 		local IsSelected = 0;
-		if (LeftCol[i]['num'] == Save.Data.SquidloonColor) {IsSelected = 1;}
+		if (LeftCol[i].num == Save.Data.SquidloonColor) {IsSelected = 1;}
 		
 		if (IsSelected) {output += "\f[bold,1]\![*]";}
-		output += "\q[{LeftCol[i]['name']},OnChangeBalloonColor,squidloon,{LeftCol[i]['num']}]\n";
+		output += "\q[{LeftCol[i].name},OnChangeBalloonColor,squidloon,{LeftCol[i].num}]\n";
 		if (IsSelected) {output += "\f[bold,default]";}
 	}
 	output += "\_l[0,0]\n\_l[110]";
 	for (local i = 0; i < RightCol.length; i++)
 	{
 		local IsSelected = 0;
-		if (RightCol[i]['num'] == Save.Data.SquidloonColor) {IsSelected = 1;}
+		if (RightCol[i].num == Save.Data.SquidloonColor) {IsSelected = 1;}
 		
 		if (IsSelected) {output += "\f[bold,1]\![*]";}
-		output += "\q[{RightCol[i]['name']},OnChangeBalloonColor,squidloon,{RightCol[i]['num']}]\n\_l[110]";
+		output += "\q[{RightCol[i].name},OnChangeBalloonColor,squidloon,{RightCol[i].num}]\n\_l[110]";
 		if (IsSelected) {output += "\f[bold,default]";}
 	}
 	
