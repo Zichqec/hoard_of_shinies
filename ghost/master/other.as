@@ -4,6 +4,13 @@ function OnTranslate
 	
 	talkstr = AutoPause(talkstr);
 	
+	//What I really want is a new option for TalkBuilder that lets you set specific tags at the start of a talk block... so you can pick balloons, fonts, balloon speeds, etc. Maybe even something to be appended at the end...? hm
+	if (CurrentBalloonName == "squidloon")
+	{
+		talkstr = talkstr.Replace("\b[0]","\b[{Save.Data.SquidloonColor}0]");
+		talkstr = talkstr.Replace("\b[2]","\b[{Save.Data.SquidloonColor}2]");
+	}
+	
 	return talkstr;
 }
 
@@ -41,6 +48,11 @@ function OnStartTalk
 	else
 	{
 		LastTalk = Reflection.Get("RandomTalk")();
+	}
+	
+	if (CurrentBalloonName == "squidloon")
+	{
+		LastTalk = "\b[0]" + LastTalk; //bad solution, if you're going to do this i think you should write the balloon tags direct...
 	}
 	return LastTalk;
 }
