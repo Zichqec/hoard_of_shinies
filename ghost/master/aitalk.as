@@ -190,17 +190,185 @@ talk RandomTalk
 	\s[3]Hehe... hehehe... \w8\s[2]Our collection is coming along so nicely~!
 }
 
-// talk ChainTest if (ChainIndex == 0)
-// {
-	// 0
-// }
+talk RandomTalk
+{
+	\s[1]Sometimes I wish the market wasn't so far away.
+	
+	\s[0]But then again, if it were closer then our stash would be way more likely to be discovered, wouldn't it?
+	
+	\s[2]This is a good spot, I'm glad we explored out this far.
+}
 
-// talk ChainTest if (ChainIndex == 1)
-// {
-	// 1
-// }
+talk RandomTalk
+{
+	\s[0]I heard a good tip earlier; apparently someone brought in an old chest that has a rusted lock, and nobody's been able to get into it.
+	
+	\s[2]Sounds like the perfect job for Mica~!
+}
 
-// talk ChainTest if (ChainIndex == 2)
-// {
-	// 2
-// }
+talk RandomTalk
+{
+	\s[0]I found a bunch of pebbles in the kelp forest arranged in the shape of {afish}.
+	
+	\s[2]It was really neat, I wonder who made it?
+}
+
+talk RandomTalk
+{
+	\s[5]Oh yeah, I wanted to tell you. \s[3]I found a really cool rock with {afish} design scratched into it!
+	
+	\s[2]I'll take you to see it next time we're out around {thecliffs}~!
+}
+
+talk RandomTalk
+{
+	\s[0]Do you think the others would be impressed with our collection?
+	
+	\s[1]I wouldn't risk showing it to them, of course, \w4\s[2]but sometimes I like to imagine seeing the envy on their faces!
+}
+
+talk RandomTalk
+{
+	\s[0]Have you seen the new flag old man Rodger got? He has it displayed above his stall at the market.
+	
+	\s[2]Seems his collection is growing too~!
+}
+
+talk RandomTalk
+{
+	\s[0]I wonder what it'll look like when this place is completely filled...
+	
+	\s[2]Sparkly, that's for sure, hehe~!
+}
+
+talk RandomTalk
+{
+	\s[0]I'm thinking about starting to put down shells around the cave entrance to form a pattern.
+	
+	\s[6]I can't decide on a pattern though, so I've just been collecting every nice shell I see...
+}
+
+talk RandomTalk
+{
+	\s[0]Someone asked me what my favorite kind of {metalgem} is. \s[1]I couldn't decide, so I said:
+	
+	\s[5]... All of them... \w8\w8
+	
+	\s[6]They didn't like that answer.
+}
+
+//Chain dialogue, with a bonus middle variation
+talk RandomTalk
+{
+	%{ TalkTimer.RandomTalkQueue = [Chain_Reorganizing1, Chain_Reorganizing2]; }
+	\s[0]I think I want to reorganize these ledges over here. I'm thinking it would be nicer if I moved all those {forks} to the next ledge up so that they're closer to the {rubies}.
+}
+
+talk Chain_Reorganizing1
+{
+	\s[1]Oh, but if I do that, then they're too close to this {metal} collection...
+}
+
+talk Chain_Reorganizing1
+{
+	\s[1]Oh, but then the light wouldn't hit them the same way, that would be a shame...
+}
+
+talk Chain_Reorganizing2
+{
+	\s[1].\w8.\w8. \w8\w8Hmm.
+	
+	\s[6]Ohh, I don't know, and now I'm getting stressed about it.
+	
+	\s[1]I'll just leave them be for now and think about it later...
+}
+
+//Dialogue with multiple possible endings
+talk RandomTalk
+{
+	\s[0]Sometimes when I stop by old man Rodger's stall at the market, he tells me stories about the things he's seen.
+	
+	>RodgerStory
+}
+
+talk RodgerStory
+{
+	\s[5]He once told me he witnessed a huge ship sinking... \s[1]but it sunk into a deep part of the ocean where we don't go.
+	
+	\s[0]I wonder what's down there sometimes. Do you think there are others like us...?
+}
+
+talk RodgerStory
+{
+	\s[5]He says when he was young he explored oceans far away from here... \s[0]The kind of places you only hear of in legend.
+	
+	\s[2]It sounds so exciting! \s[1]I think it would take a lot of bravery to go that far.
+}
+
+talk RodgerStory
+{
+	%{local lcrab = crab();}
+	\s[5]Sometimes he tells me about this gigantic {lcrab} he saw on one of his adventures...
+	
+	\s[2]I think the {lcrab} gets bigger every time he tells the story, hehe~!
+}
+
+talk RandomTalk
+{
+	\s[3]I caught a tasty fish out by {thekelpforest}.
+	
+	\s[0]Where there's one there's more, so maybe we should try hunting there soon~
+}
+
+talk RandomTalk
+{
+	\s[1]I keep changing my mind about where I want these {rubies}.
+	
+	\s[6]So many options, how to choose the best one...!
+}
+
+talk RandomTalk
+{
+	\s[1]I've made kind of a mess of one of the alcoves towards the back.
+	
+	\s[0]I started stashing stuff there until I had time to sort through it all, but since then I've been so busy rearranging things out here that I haven't gotten to it...
+	
+	\s[6]I'll work on it eventually.
+}
+
+talk RandomTalk
+{
+	\s[0]Hehehe... \s[4]Nothing beats that tingly feeling moments before you open up a treasure chest and discover what's inside.
+	
+	\s[2]We should go out hunting for treasure soon~!
+}
+
+talk RandomTalk
+{
+	\s[0]Whenever I'm at the market I try to make some time to see what other merfolk have made out of coral.
+	
+	\s[2]I'm always glad I did. So many pretty pieces~!
+}
+
+talk RandomTalk
+{
+	\s[0]I still haven't decided what to do about that big anchor we found. \s[1]It would be a really cool piece for our collection, but...
+	
+	\s[6]If we hire help to move it then we have to give out the location of our stash. \s[1]We can't move our stash to it either, it's a completely exposed area with nowhere good to hide.
+	
+	Hmm...
+}
+
+talk RandomTalk
+{
+	\s[0].\w8.\w8. \w8\w8 \s[6]Hmm... \w8Where did that {metal} {necklace} get to now...?
+}
+
+talk RandomTalk
+{
+	\s[1]Sometimes I get excited and swim too fast through here. I end up knocking something down, so then I have to swim to catch it...
+	
+	\s[6]And that makes something else fall down, so I go to catch that, and then...
+	
+	\s[1]\i[450]... And then I have a lot of work to do.\s[1]
+}

@@ -2,7 +2,15 @@ function OnMouseDoubleClick
 {
 	if (Shiori.Reference[5] == 0)
 	{
-		return OnSakuraMenu;
+		if (Shiori.Reference[3] == 1)
+		{
+			return IslandBubbling();
+		}
+		else
+		{
+			return OnSakuraMenu;
+		}
+		
 	}
 }
 
@@ -35,19 +43,19 @@ function OnSakuraMenu
 	
 	//Talkrate changer
 	output += "\![*]Talkrate:\n";
-	local times = ["Off,0","1m,60","3m,180","5m,300","10m,600","15m,900"];
+	local times = TalkTimes();
 	
 	for (i = 0; i < times.length; i++)
 	{
 		local time = times[i];
 		
-		if (time.Split(",")[1] == Save.Data.TalkInterval)
+		if (time.interval == Save.Data.TalkInterval)
 		{
-			output += `\_a[OnChangeTalkrate,{time.Split(',')[1]},"{greet}"]{time.Split(',')[0]}\_a  `;
+			output += `\_a[OnChangeTalkrate,{time.interval}]{time.label}\_a  `;
 		}
 		else
 		{
-			output += `\__q[OnChangeTalkrate,{time.Split(',')[1]},"{greet}"]{time.Split(',')[0]}\__q  `;
+			output += `\__q[OnChangeTalkrate,{time.interval}]{time.label}\__q  `;
 		}
 	}
 	output += "\n\n";
@@ -129,6 +137,18 @@ function OnChangeBalloonColor
 {
 	if (Shiori.Reference[0] == "squidloon") { Save.Data.SquidloonColor = Shiori.Reference[1]; }
 	return OnBalloonColorMenu;
+}
+
+function TalkTimes
+{
+	return [
+		{label: "Off", interval: 0},
+		{label: "1m", interval: 60},
+		{label: "3m", interval: 180},
+		{label: "5m", interval: 300},
+		{label: "10m", interval: 600},
+		{label: "15m", interval: 900}
+	];
 }
 
 function OnChangeTalkrate

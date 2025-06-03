@@ -10,22 +10,18 @@ function OnAosoraDefaultSaveData
 //Values to be set upon loading
 function OnAosoraLoad
 {
-	TalkTimer.RandomTalk = OnStartTalk;
+	TalkTimer.RandomTalk = OnAITalk;
 	TalkTimer.RandomTalkIntervalSeconds = Save.Data.TalkInterval;
 	TalkBuilder.Default.AutoLineBreak = "\n\w8\w4";
 	
 	LastTalk = "";
-	ChainName = "";
-	ChainIndex = 0;
-	ChainEnd = 0;
 }
 
 function OnBoot()
 {
 	Save.Data.SpecialClose.Clear();
-	local dressups = RandomizeDressups();
 	
-	return "\1\s[10]\![set,alignmenttodesktop,bottom]\0{dressups}\s[0]" + BootTalk();
+	return "\1\s[10]\![set,alignmenttodesktop,bottom]\0{RandomizeDressups}\s[0]" + BootTalk();
 }
 
 function RandomizeDressups

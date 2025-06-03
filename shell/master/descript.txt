@@ -2,7 +2,7 @@ charset,UTF-8
 type,shell
 
 name,Merfolk May
-craftman, Ako-Kpiali
+craftman, Ako-Kipali
 craftmanurl, https://ako-kipali.tumblr.com/ghost-stuff
 
 seriko.alignmenttodesktop,free

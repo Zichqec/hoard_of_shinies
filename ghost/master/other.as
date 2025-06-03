@@ -16,9 +16,8 @@ function OnTranslate
 
 function AutoPause(talkstr)
 {
-	if (talkstr.IndexOf("\![no-autopause]").IsNull() && talkstr.IndexOf("■Aosora reload completed").IsNull())
+	if (!(talkstr.Contains("\![no-autopause]") || talkstr.Contains("■Aosora reload completed")))
 	{
-		talkstr = talkstr.Replace("\x\n[-200]\n\w8\w4\n\w8\w4","\x"); //bandaid patch for firstboot, I'll try to come up with something better later...
 		talkstr = talkstr.Replace(", ",",\w4 ");
 		talkstr = talkstr.Replace(". ",".\w8\w8 ");
 		talkstr = talkstr.Replace("~ ","~\w8\w8 ");
@@ -31,37 +30,17 @@ function AutoPause(talkstr)
 	return talkstr;
 }
 
+//Call coming from menu, or hotkey
 function OnStartTalk
 {
-	if (ChainName != "")
-	{
-		LastTalk = Reflection.Get("{ChainName}")();
-		
-		ChainIndex++;
-		if (ChainIndex >= ChainEnd)
-		{
-			ChainName = "";
-			ChainIndex = 0;
-			ChainEnd = 0;
-		}
-	}
-	else
-	{
-		LastTalk = Reflection.Get("RandomTalk")();
-	}
-	
-	if (CurrentBalloonName == "squidloon")
-	{
-		LastTalk = "\b[0]" + LastTalk; //bad solution, if you're going to do this i think you should write the balloon tags direct...
-	}
 	return LastTalk;
 }
 
-function OnStartChain
+//Call coming from TalkTimer or \a tag
+function OnAITalk
 {
-	ChainName = Shiori.Reference[0];
-	ChainIndex = 0;
-	ChainEnd = Reflection.Get("{ChainName}").length;
+	LastTalk = Reflection.Get("RandomTalk")();
+	return LastTalk;
 }
 
 function OnAnchorSelect
@@ -74,18 +53,9 @@ function OnAnchorSelect
 
 function OnKeyPress
 {
-	if (Shiori.Reference[0] == "f1")
-	{
-		return "\![open,readme]";
-	}
-	else if (Shiori.Reference[0] == "t")
-	{
-		return OnStartTalk;
-	}
-	else if (Shiori.Reference[0] == "r")
-	{
-		return OnLastTalk;
-	}
+	if (Shiori.Reference[0] == "f1") { return "\![open,readme]"; }
+	else if (Shiori.Reference[0] == "t") { return OnStartTalk; }
+	else if (Shiori.Reference[0] == "r") { return OnLastTalk; }
 }
 
 function OnSurfaceRestore
@@ -105,8 +75,18 @@ function homeurl
 
 function ghostver
 {
-	return "1.0.0";
+	return "1.0.5";
 }
+
+function Capitalize(word)
+{
+	word = "{word}";
+	local firstlet = word.Substring(0,1);
+	local rest = word.Substring(1);
+	
+	return firstlet.ToUpper() + rest;
+}
+
 
 //—————————————————————————————— Right click menu links ——————————————————————————————
 function FormatLinks(links)
@@ -114,31 +94,48 @@ function FormatLinks(links)
 	local output = "";
 	for (i = 0; i < links.length; i++)
 	{
-		output += links[i];
-		//Alternate between adding  or 
-		if (i % 2 == 1)
-		{
-			output += (2).ToAscii();
-		}
-		else
-		{
-			output += (1).ToAscii();
-		}
+		//Name then 0x01, URL then 0x02
+		output += links[i]["name"] + (1).ToAscii();
+		output += links[i]["url"] + (2).ToAscii();
 	}
 	return output;
 }
 
 function sakura@recommendsites
 {
-	return FormatLinks(recommendsites_sakura());
+	return FormatLinks([
+		{name: "Zi's Ukagaka Space", url: "https://ukagaka.zichqec.com/"},
+		{name: "Merfolk May freeshell", url: "https://ako-kipali.tumblr.com/ghost-stuff"},
+		{name: "Aosora SHIORI", url: "https://github.com/kanadelab/aosora-shiori"}
+	]);
 }
 
-function recommendsites_sakura
+function getaistate
 {
-	return
-	[
-		"Zi's Ukagaka Space", "https://ukagaka.zichqec.com/",
-		"Merfolk May freeshell", "https://ako-kipali.tumblr.com/ghost-stuff",
-		"Aosora SHIORI", "https://github.com/kanadelab/aosora-shiori"
+	local Points = [
+		{name: "RandomTalk", val: RandomTalk.length},
+		{name: "BootTalk", val: BootTalk.length},
+		{name: "CloseTalk", val: CloseTalk.length},
+		{name: "SpectreTalk_cheerful", val: SpectreTalk_cheerful.length},
+		{name: "SpectreTalk_miserable", val: SpectreTalk_miserable.length},
+		{name: "SpectreTalk_dissociated", val: SpectreTalk_dissociated.length},
+		{name: "SpectreTalk_spooky", val: SpectreTalk_spooky.length},
+		{name: "NeedleTalk", val: NeedleTalk.length},
+		{name: "OnPhantaEepy", val: OnPhantaEepy.length},
+		{name: "OnLoboHowl", val: OnLoboHowl.length},
 	];
+	
+	local labels = "";
+	local values = "";
+	
+	for (local i = 0; i < Points.length; i++)
+	{
+		if (values != "") { values += ","; } //there might be a better method in aosora but i'm not sure
+		values += Points[i]["val"];
+		
+		if (labels != "") { labels += ","; }
+		labels += Points[i]["name"];
+	}
+	
+	return values + "{(1).ToAscii}" + labels;	
 }
