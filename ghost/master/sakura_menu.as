@@ -35,12 +35,6 @@ function OnSakuraMenu
 	
 	output += "\n\n";
 	
-	if (CurrentBalloonName == "squidloon")
-	{
-		output += "\![*]\q[Balloon color,OnBalloonColorMenu,squidloon]";
-		output += "\n\n";
-	}
-	
 	output += "\![*]\__q[OnMicaSong@Start]Sing\__q";
 	
 	output += "\n\n";
@@ -101,19 +95,20 @@ function OnSettings
 	
 	output += "\n\n";
 	
+	if (CurrentBalloonName == "squidloon")
+	{
+		output += "\![*]\q[Balloon color,OnBalloonColorMenu,squidloon]";
+		output += "\n\n";
+	}
+	
 	output += "\![*]\q[Back,OnSakuraMenu]  \![*]\q[Close,OnBlank]";
 	
 	return output;
 }
 
-function OnLastTalk
-{
-	return LastTalk;
-}
-
 function OnBalloonColorMenu
 {
-	local output = "\0\b[2]";
+	local output = "\C\![lock,balloonrepaint]\c\0\b[2]\![quicksection,1]";
 	
 	local LeftCol = [
 		{num: "00", name: "Old Rose"},
@@ -155,29 +150,35 @@ function OnBalloonColorMenu
 	for (local i = 0; i < LeftCol.length; i++)
 	{
 		local IsSelected = 0;
-		if (LeftCol[i].num == Save.Data.SquidloonColor) {IsSelected = 1;}
+		if (LeftCol[i].num == Save.Data.SquidloonColor) IsSelected = 1;
 		
-		if (IsSelected) {output += "\f[bold,1]\![*]";}
+		if (IsSelected) output += "\f[bold,1]\![*]";
 		output += "\q[{LeftCol[i].name},OnChangeBalloonColor,squidloon,{LeftCol[i].num}]\n";
-		if (IsSelected) {output += "\f[bold,default]";}
+		if (IsSelected) output += "\f[bold,default]";
 	}
 	output += "\_l[0,0]\n\_l[110]";
 	for (local i = 0; i < RightCol.length; i++)
 	{
 		local IsSelected = 0;
-		if (RightCol[i].num == Save.Data.SquidloonColor) {IsSelected = 1;}
+		if (RightCol[i].num == Save.Data.SquidloonColor) IsSelected = 1;
 		
-		if (IsSelected) {output += "\f[bold,1]\![*]";}
+		if (IsSelected) output += "\f[bold,1]\![*]";
 		output += "\q[{RightCol[i].name},OnChangeBalloonColor,squidloon,{RightCol[i].num}]\n\_l[110]";
-		if (IsSelected) {output += "\f[bold,default]";}
+		if (IsSelected) output += "\f[bold,default]";
 	}
+	
+	output += "\n\f[align,left]\n";
+	
+	output += "\![*]\q[Back,OnSettings]  \![*]\q[Close,OnBlank]";
+	
+	output += "\![unlock,balloonrepaint]";
 	
 	return output;
 }
 
 function OnChangeBalloonColor
 {
-	if (Shiori.Reference[0] == "squidloon") { Save.Data.SquidloonColor = Shiori.Reference[1]; }
+	if (Shiori.Reference[0] == "squidloon") Save.Data.SquidloonColor = Shiori.Reference[1];
 	return OnBalloonColorMenu;
 }
 
