@@ -1,0 +1,482 @@
+descript
+{
+	version,1
+}
+
+//—————————————————————————————— Sakura surfaces ——————————————————————————————
+
+//Default
+surface100
+{
+	//Hand Left
+	animation700.interval,always
+	animation700.pattern0,overlay,700,0,0,0
+	animation700.pattern1,overlay,700,1600,0,0
+	animation700.pattern2,overlay,701,0,0,0
+	animation700.pattern3,overlay,701,1600,0,0
+	animation700.option,shared-index
+
+	//Hand Right
+	animation750.interval,always
+	animation750.pattern0,overlay,750,0,0,0
+	animation750.pattern1,overlay,750,1600,0,0
+	animation750.pattern2,overlay,751,0,0,0
+	animation750.pattern3,overlay,751,1600,0,0
+	animation750.option,shared-index
+}
+
+//EEEMOTIONS!!!!
+//Embarrassed
+surface101
+{
+	//Hand Left
+	animation700.interval,always
+	animation700.pattern0,overlay,704,0,0,0
+	animation700.pattern1,overlay,704,1600,0,0
+	animation700.pattern2,overlay,703,0,0,0
+	animation700.pattern3,overlay,703,1600,0,0
+	animation700.option,shared-index
+
+	//Hand Right
+	animation750.interval,always
+	animation750.pattern0,overlay,753,0,0,0
+	animation750.pattern1,overlay,753,1600,0,0
+	animation750.pattern2,overlay,754,0,0,0
+	animation750.pattern3,overlay,754,1600,0,0
+	animation750.option,shared-index
+	
+	//Outer eyelids
+	animation501.interval,runonce
+	animation501.pattern0,overlay,503,0,0,0
+}
+
+//Happy eyes + flap
+surface102
+{
+	//Hand Left
+	animation700.interval,always
+	animation700.pattern0,overlay,700,0,0,0
+	animation700.pattern1,overlay,700,300,0,0
+	animation700.pattern2,overlay,701,0,0,0
+	animation700.pattern3,overlay,701,500,0,0
+	animation700.option,shared-index
+
+	//Hand Right
+	animation750.interval,always
+	animation750.pattern0,overlay,750,0,0,0
+	animation750.pattern1,overlay,750,300,0,0
+	animation750.pattern2,overlay,751,0,0,0
+	animation750.pattern3,overlay,751,500,0,0
+	animation750.option,shared-index
+	
+	//Outer eyelids
+	animation501.interval,runonce
+	animation501.pattern0,overlay,502,0,0,0
+}
+
+//Happy eyes + close to chest
+surface103
+{
+	//Hand Left
+	animation700.interval,runonce
+	animation700.pattern0,overlay,704,0,0,0
+
+	//Hand Right
+	animation750.interval,runonce
+	animation750.pattern0,overlay,754,0,0,0
+	
+	//Outer eyelids
+	animation501.interval,runonce
+	animation501.pattern0,overlay,502,0,0,0
+}
+
+//Happy eyes + face
+surface104
+{
+	//Hand Left
+	animation700.interval,runonce
+	animation700.pattern0,overlay,703,0,0,0
+
+	//Hand Right
+	animation750.interval,runonce
+	animation750.pattern0,overlay,753,0,0,0
+	
+	//Outer eyelids
+	animation501.interval,runonce
+	animation501.pattern0,overlay,502,0,0,0
+}
+
+//Gasp
+surface105
+{
+	//Eyes
+	animation450.interval,always
+	animation450.pattern1,overlay,401,0,0,0
+	animation450.pattern2,overlay,402,300,0,0
+	animation450.pattern3,overlay,401,300,0,0
+	animation450.option,shared-index
+	
+	//mouth
+	animation30.interval,runonce
+	animation30.pattern0,overlay,551,0,0,0
+	
+	//hand left
+	animation700.interval,runonce
+	animation700.pattern0,overlay,703,0,0,0
+
+	//hand right
+	animation750.interval,runonce
+	animation750.pattern0,overlay,753,0,0,0
+}
+
+//Stress flap
+surface106
+{
+	//Eyes sparkle and moving!
+	animation100.interval,runonce
+	animation100.pattern0,parallelstop,(401,402,403,404)
+	animation100.pattern1,alternativestart,(401,402,403,404)
+
+		//Top left
+		animation401.interval,never
+		animation401.pattern0,overlay,411,0,0,0
+		animation401.pattern1,overlay,412,400,0,0
+		animation401.pattern2,overlay,411,400,0,0
+		animation401.pattern3,overlay,412,400,0,0
+		animation401.pattern4,overlay,411,400,0,0
+		animation401.pattern5,start,100
+		
+		//Top right
+		animation402.interval,never
+		animation402.pattern0,overlay,421,0,0,0
+		animation402.pattern1,overlay,422,400,0,0
+		animation402.pattern2,overlay,421,400,0,0
+		animation402.pattern3,overlay,422,400,0,0
+		animation402.pattern4,overlay,421,400,0,0
+		animation402.pattern5,start,100
+		
+		//Bottom left
+		animation403.interval,never
+		animation403.pattern0,overlay,431,0,0,0
+		animation403.pattern1,overlay,432,400,0,0
+		animation403.pattern2,overlay,431,400,0,0
+		animation403.pattern3,overlay,432,400,0,0
+		animation403.pattern4,overlay,431,400,0,0
+		animation403.pattern5,start,100
+
+		//Bottom Right
+		animation404.interval,never
+		animation404.pattern0,overlay,431,0,0,0
+		animation404.pattern1,overlay,432,400,0,0
+		animation404.pattern2,overlay,431,400,0,0
+		animation404.pattern3,overlay,432,400,0,0
+		animation404.pattern4,overlay,431,400,0,0
+		animation404.pattern5,start,100
+	
+	//Hand Left
+	animation700.interval,always
+	animation700.pattern0,overlay,700,0,0,0
+	animation700.pattern1,overlay,700,300,0,0
+	animation700.pattern2,overlay,701,0,0,0
+	animation700.pattern3,overlay,701,500,0,0
+	animation700.option,shared-index
+
+	//Hand Right
+	animation750.interval,always
+	animation750.pattern0,overlay,750,0,0,0
+	animation750.pattern1,overlay,750,300,0,0
+	animation750.pattern2,overlay,751,0,0,0
+	animation750.pattern3,overlay,751,500,0,0
+	animation750.option,shared-index
+	
+	//Outer eyelids
+	animation501.interval,runonce
+	animation501.pattern0,overlay,503,0,0,0
+}
+
+//eepy
+surface109
+{
+	collision0,152,121,227,152,forehead
+	collision2,167,253,236,292,gills
+	
+	//Fin flips
+	animation0.interval,always
+	animation0.pattern0,overlay,201,0,0,0
+	animation0.pattern1,overlay,202,800,0,0
+	animation0.pattern3,overlay,201,800,0,0
+	
+	//Tail Flip
+	animation1.interval,always
+	animation1.pattern0,overlay,301,0,0,0
+	animation1.pattern1,overlay,302,2000,0,0
+	animation1.pattern2,overlay,303,2000,0,0
+	animation1.pattern3,overlay,302,2000,0,0
+	animation1.pattern4,overlay,301,2000,0,0
+	
+	//Outer eyelid
+	animation501.interval,runonce
+	animation501.pattern0,overlay,500,0,0,0
+	
+	//mouth
+	animation30.interval,always
+	animation30.pattern0,overlay,551,750,0,0
+	animation30.pattern1,overlay,552,400,0,0
+	animation30.pattern2,overlay,551,200,0,0
+	animation30.pattern3,overlay,-1,100,0,0	
+	
+	//bubbles
+    animation800.interval,always
+	animation800.pattern0,overlay,800,750,0,0
+	animation800.pattern1,overlay,801,200,0,0
+	animation800.pattern2,overlay,802,200,0,0
+	animation800.pattern3,overlay,803,200,0,0	
+	animation800.pattern4,overlay,-1,100,0,0
+	
+	//hand left
+	animation700.interval,runonce
+	animation700.pattern0,overlay,703,0,0,0
+
+	//hand right
+	animation750.interval,runonce
+	animation750.pattern0,overlay,753,0,0,0
+
+}
+
+//Fin flips - normal
+surface.append100,101,105,106
+{
+	//Fin flips
+	animation0.interval,always
+	animation0.pattern0,overlay,201,0,0,0
+	animation0.pattern1,overlay,202,300,0,0
+	animation0.pattern2,overlay,201,300,0,0
+	animation0.option,shared-index
+	
+	//Tail Flip
+	animation1.interval,always
+	animation1.pattern0,overlay,301,0,0,0
+	animation1.pattern1,overlay,302,200,0,0
+	animation1.pattern2,overlay,303,200,0,0
+	animation1.pattern3,overlay,302,200,0,0
+	animation1.pattern4,overlay,301,200,0,0
+	animation1.option,shared-index
+}
+
+//Fin flips - fast
+surface.append102,103,104
+{
+	//Fin flips
+	animation0.interval,always
+	animation0.pattern0,overlay,201,0,0,0
+	animation0.pattern1,overlay,202,200,0,0
+	animation0.pattern2,overlay,201,200,0,0
+	animation0.option,shared-index
+	
+	//Tail Flip
+	animation1.interval,always
+	animation1.pattern0,overlay,301,0,0,0
+	animation1.pattern1,overlay,302,160,0,0
+	animation1.pattern2,overlay,303,160,0,0
+	animation1.pattern3,overlay,302,160,0,0
+	animation1.pattern4,overlay,301,160,0,0
+	animation1.option,shared-index
+}
+
+//Talk animations
+surface.append100-104,106
+{
+	//Talk
+	animation10.interval,talk,4
+	animation10.pattern0,alternativestart,(2,3,4)
+	
+	animation2.interval,never
+	animation2.pattern0,overlay,552,100,0,0
+	animation2.pattern1,overlay,551,100,0,0
+	animation2.pattern2,overlay,-1,100,0,0
+	animation2.option,shared-index
+
+	animation3.interval,never
+	animation3.pattern0,overlay,551,100,0,0
+	animation3.pattern1,overlay,-1,100,0,0
+	animation3.option,shared-index
+
+	animation4.interval,never
+	animation4.pattern0,overlay,552,100,0,0
+	animation4.pattern1,overlay,-1,100,0,0
+	animation4.option,shared-index
+	
+	//Talk bubbles
+	animation800.interval,talk,4
+	animation800.pattern0,overlay,800,200,0,0
+	animation800.pattern1,overlay,801,200,0,0
+	animation800.pattern2,overlay,802,200,0,0
+	animation800.pattern3,overlay,803,200,0,0	
+	animation800.pattern4,overlay,-1,200,0,0
+	animation800.option,shared-index
+}
+
+//Eye animations
+surface.append100,101
+{
+	//Eyes sparkle and moving!
+	animation100.interval,runonce
+	animation100.pattern0,parallelstop,(400,401,402,403,404)
+	animation100.pattern1,alternativestart,(400,401,402,403,404)
+	
+		//Front
+		animation400.interval,never
+		animation400.pattern0,overlay,401,0,0,0
+		animation400.pattern1,overlay,402,400,0,0
+		animation400.pattern2,overlay,401,400,0,0
+		animation400.pattern3,overlay,402,400,0,0
+		animation400.pattern4,overlay,401,400,0,0
+		animation400.pattern5,overlay,402,400,0,0
+		animation400.pattern6,overlay,401,400,0,0
+		animation400.pattern7,start,100
+
+		//Top left
+		animation401.interval,never
+		animation401.pattern0,overlay,411,0,0,0
+		animation401.pattern1,overlay,412,400,0,0
+		animation401.pattern2,overlay,411,400,0,0
+		animation401.pattern3,overlay,412,400,0,0
+		animation401.pattern4,overlay,411,400,0,0
+		animation401.pattern5,overlay,412,400,0,0
+		animation401.pattern6,overlay,411,400,0,0
+		animation401.pattern7,start,100
+		
+		//Top right
+		animation402.interval,never
+		animation402.pattern0,overlay,421,0,0,0
+		animation402.pattern1,overlay,422,400,0,0
+		animation402.pattern2,overlay,421,400,0,0
+		animation402.pattern3,overlay,422,400,0,0
+		animation402.pattern4,overlay,421,400,0,0
+		animation402.pattern5,overlay,422,400,0,0
+		animation402.pattern6,overlay,421,400,0,0
+		animation402.pattern7,start,100
+		
+		//Bottom left
+		animation403.interval,never
+		animation403.pattern0,overlay,431,0,0,0
+		animation403.pattern1,overlay,432,400,0,0
+		animation403.pattern2,overlay,431,400,0,0
+		animation403.pattern3,overlay,432,400,0,0
+		animation403.pattern4,overlay,431,400,0,0
+		animation403.pattern5,overlay,432,400,0,0
+		animation403.pattern6,overlay,431,400,0,0
+		animation403.pattern7,start,100
+
+		//Bottom Right
+		animation404.interval,never
+		animation404.pattern0,overlay,431,0,0,0
+		animation404.pattern1,overlay,432,400,0,0
+		animation404.pattern2,overlay,431,400,0,0
+		animation404.pattern3,overlay,432,400,0,0
+		animation404.pattern4,overlay,431,400,0,0
+		animation404.pattern5,overlay,432,400,0,0
+		animation404.pattern6,overlay,431,400,0,0
+		animation404.pattern7,start,100
+	
+	//Look forward - manual call, stay until surface changes just because it's awkward for it to flick away and then change
+	animation450.interval,never
+	animation450.pattern0,parallelstop,(100,400,401,402,403,404)
+	animation450.pattern1,overlay,401,0,0,0
+	animation450.pattern2,overlay,402,400,0,0
+	animation450.pattern3,overlay,401,400,0,0
+	animation450.pattern4,overlay,402,400,0,0
+	animation450.pattern5,overlay,401,400,0,0
+	animation450.pattern6,overlay,402,400,0,0
+	animation450.pattern7,overlay,401,400,0,0
+	animation450.pattern8,start,450
+	
+	//Look forward - manual call, go back to looking around after
+	animation451.interval,never
+	animation451.pattern0,parallelstop,(100,400,401,402,403,404)
+	animation451.pattern1,overlay,401,0,0,0
+	animation451.pattern2,overlay,402,400,0,0
+	animation451.pattern3,overlay,401,400,0,0
+	animation451.pattern4,overlay,402,400,0,0
+	animation451.pattern5,overlay,401,400,0,0
+	animation451.pattern6,overlay,402,400,0,0
+	animation451.pattern7,overlay,401,400,0,0
+	animation451.pattern8,start,100
+	animation451.pattern9,overlay,-1,0,0,0
+	
+	
+
+	//Blink, inner eyelids.
+	animation500.interval,random,4
+	animation500.pattern0,overlay,461,0,0,0
+	animation500.pattern1,overlay,462,50,0,0
+	animation500.pattern2,overlay,463,100,0,0
+	animation500.pattern3,overlay,462,300,0,0
+	animation500.pattern4,overlay,461,100,0,0
+	animation500.pattern5,overlay,-1,50,0,0
+	animation500.option,shared-index
+}
+
+//—————————————————————————————— Kero surfaces ——————————————————————————————
+
+surface110
+{
+	collision,45,252,151,300,body
+	element0,overlay,surface10.png,0,0
+	
+	//seaweed
+	animation0.interval,always
+	animation0.pattern0,overlay,11,0,0,0
+	animation0.pattern1,overlay,12,600,0,0
+	animation0.pattern2,overlay,13,600,0,0
+	animation0.pattern3,overlay,12,600,0,0
+	animation0.pattern4,overlay,12,600,0,0
+	animation0.option,shared-index
+	
+	//bubbles
+	animation1.interval,always
+	animation1.pattern0,overlay,14,0,0,0
+	animation1.pattern1,overlay,15,400,0,0
+	animation1.pattern2,overlay,16,400,0,0
+	animation1.pattern3,overlay,16,400,0,0
+	animation1.option,shared-index
+}
+
+//Dressups and collisions
+surface.append0-9,100-109
+{
+	collision1,152,121,227,152,forehead
+	collision3,167,253,236,292,gills
+	
+	
+	//Belts
+	animation601.interval,bind
+	animation601.pattern0,add,601,0,0,0
+	
+	animation602.interval,bind
+	animation602.pattern0,add,602,0,0,0
+	
+	animation603.interval,bind
+	animation603.pattern0,add,603,0,0,0
+	
+	//Hats
+	animation621.interval,bind
+	animation621.pattern0,add,621,0,0,0
+	
+	animation622.interval,bind
+	animation622.pattern0,add,622,0,0,0
+	
+	animation623.interval,bind
+	animation623.pattern0,add,623,0,0,0
+	
+	//Necklaces
+	animation641.interval,bind
+	animation641.pattern0,add,641,0,0,0
+	
+	animation642.interval,bind
+	animation642.pattern0,add,642,0,0,0
+	
+	animation643.interval,bind
+	animation643.pattern0,add,643,0,0,0
+	
+}
