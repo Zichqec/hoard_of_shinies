@@ -2,6 +2,22 @@ function OnTranslate
 {
 	local talkstr = Shiori.Reference[0];
 	
+	if (Save.Data.ReducedMotion)
+	{
+		talkstr = talkstr.Replace("\s[0]","\s[100]");
+		talkstr = talkstr.Replace("\s[1]","\s[101]");
+		talkstr = talkstr.Replace("\s[2]","\s[102]");
+		talkstr = talkstr.Replace("\s[3]","\s[103]");
+		talkstr = talkstr.Replace("\s[4]","\s[104]");
+		talkstr = talkstr.Replace("\s[5]","\s[105]");
+		talkstr = talkstr.Replace("\s[6]","\s[106]");
+		talkstr = talkstr.Replace("\s[7]","\s[107]");
+		talkstr = talkstr.Replace("\s[8]","\s[108]");
+		talkstr = talkstr.Replace("\s[8]","\s[108]");
+		talkstr = talkstr.Replace("\s[9]","\s[109]");
+		talkstr = talkstr.Replace("\s[10]","\s[110]");
+	}
+	
 	talkstr = AutoPause(talkstr);
 	
 	//What I really want is a new option for TalkBuilder that lets you set specific tags at the start of a talk block... so you can pick balloons, fonts, balloon speeds, etc. Maybe even something to be appended at the end...? hm
@@ -86,6 +102,21 @@ function Capitalize(word)
 	local rest = word.Substring(1);
 	
 	return firstlet.ToUpper() + rest;
+}
+
+function emdash
+{
+	return "\f[name,calibri]—\f[name,default]";
+}
+
+function otherghostname
+{
+	OpenGhosts = [];
+	for (local i = 0; i < Shiori.Reference.length; i++)
+	{
+		local split = Shiori.Reference[i].Split("{(1).ToAscii()}");
+		OpenGhosts.Add(split[0]);
+	}
 }
 
 

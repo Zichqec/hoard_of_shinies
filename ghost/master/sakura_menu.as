@@ -19,19 +19,19 @@ function OnSakuraMenu
 	local output = "";
 	
 	//Ocean Fishies, annoyingly, doesn't have quite a big enough small size to fit the whole menu...
-	if (CurrentBalloonName == "Ocean Fishies") { output += "\0\b[2]"; }
-	else { output += "\0\b[0]"; }
+	if (CurrentBalloonName == "Ocean Fishies") output += "\0\b[2]";
+	else output += "\0\b[0]";
 	
 	//Beach day gone wrong is one I'm including as a standard balloon, and it starts typing from the bottom, so it actually needs autoscroll...
-	if (CurrentBalloonName != "Beach Day Gone Wrong") { output += "\![set,autoscroll,disable]"; }
+	if (CurrentBalloonName != "Beach Day Gone Wrong") output += "\![set,autoscroll,disable]";
 	
 	output += "\![quicksection,true]\![no-autopause]";
 	
 	//Talk and repeat buttons
 	output += "\![*]\q[Talk,OnStartTalk]  ";
 	
-	if (LastTalk == "") { output += "\f[color,disable]\![*]Repeat\f[color,default]"; }
-	else { output += "\![*]\q[Repeat,OnLastTalk]"; }
+	if (LastTalk == "") output += "\f[color,disable]\![*]Repeat\f[color,default]";
+	else output += "\![*]\q[Repeat,OnLastTalk]";
 	
 	output += "\n\n";
 	
@@ -40,6 +40,33 @@ function OnSakuraMenu
 		output += "\![*]\q[Balloon color,OnBalloonColorMenu,squidloon]";
 		output += "\n\n";
 	}
+	
+	output += "\![*]\__q[OnMicaSong@Start]Sing\__q";
+	
+	output += "\n\n";
+	
+	output += "\![*]\q[Settings,OnSettings]";
+	
+	output += "\n\n";
+	output += "\![*]\q[Cancel,blank]";
+	
+	return output;
+}
+
+function OnLastTalk
+{
+	return LastTalk;
+}
+
+function OnSettings
+{
+	output = "\1\s[10]";
+	if (CurrentBalloonName == "Ocean Fishies") output += "\0\b[2]";
+	else output += "\0\b[0]";
+	if (CurrentBalloonName != "Beach Day Gone Wrong") output += "\![set,autoscroll,disable]";
+	output += "\s[0]\![quicksection,1]\![no-autopause]";
+	
+	output += "\f[align,center]{emdash} Settings {emdash}\n\f[align,left]\n";
 	
 	//Talkrate changer
 	output += "\![*]Talkrate:\n";
@@ -58,8 +85,23 @@ function OnSakuraMenu
 			output += `\__q[OnChangeTalkrate,{time.interval}]{time.label}\__q  `;
 		}
 	}
+	
 	output += "\n\n";
-	output += "\![*]\q[Cancel,blank]";
+	
+	output += "\![*]Reduced motion: ";
+	
+	if (Save.Data.ReducedMotion)
+	{
+		output += "\__q[OnToggleReducedMotion,0]Off\__q  \f[underline,1]\_a[OnToggleReducedMotion,1]On\_a\f[underline,default]";
+	}
+	else
+	{
+		output += "\f[underline,1]\_a[OnToggleReducedMotion,0]Off\_a\f[underline,default]  \__q[OnToggleReducedMotion,1]On\__q";
+	}
+	
+	output += "\n\n";
+	
+	output += "\![*]\q[Back,OnSakuraMenu]  \![*]\q[Close,OnBlank]";
 	
 	return output;
 }
@@ -147,7 +189,7 @@ function TalkTimes
 		{label: "3m", interval: 180},
 		{label: "5m", interval: 300},
 		{label: "10m", interval: 600},
-		{label: "15m", interval: 900}
+		{label: "15m", interval: 900},
 	];
 }
 
@@ -158,5 +200,11 @@ function OnChangeTalkrate
 	TalkTimer.RandomTalkElapsedSeconds = 0;
 	Save.Data.TalkInterval = interval;
 	
-	return OnSakuraMenu;
+	return OnSettings;
+}
+
+function OnToggleReducedMotion
+{
+	Save.Data.ReducedMotion = Shiori.Reference[0].ToNumber();
+	return OnSettings;
 }

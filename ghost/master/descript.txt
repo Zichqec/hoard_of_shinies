@@ -16,3 +16,4 @@ sstp.allowunspecifiedsend,0
 
 balloon,Ocean Fishies
 balloon,Beach Day Gone Wrong
+balloon,squidloon

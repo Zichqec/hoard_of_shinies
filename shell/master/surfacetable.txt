@@ -15,3 +15,17 @@ group,Base
 	6,Stressed
 	9,Sleepy
 }
+
+group,Slow
+{
+	scope,0
+	
+	100,Default
+	101,Embarrassed
+	102,Flap
+	103,Hold
+	104,Face
+	105,Admire
+	106,Stressed
+	109,Sleepy
+}
