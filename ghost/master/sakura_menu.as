@@ -78,7 +78,7 @@ function OnSettings
 		
 		if (time.interval == Save.Data.TalkInterval)
 		{
-			output += `\_a[OnChangeTalkrate,{time.interval}]{time.label}\_a  `;
+			output += `\f[underline,1]\_a[OnChangeTalkrate,{time.interval}]{time.label}\_a\f[underline,default]  `;
 		}
 		else
 		{
