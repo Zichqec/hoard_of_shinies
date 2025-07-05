@@ -10,7 +10,6 @@ function OnMouseDoubleClick
 		{
 			return OnSakuraMenu;
 		}
-		
 	}
 }
 
