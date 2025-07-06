@@ -5,25 +5,19 @@ function OnSpectrePlugin@ConfirmCalibration
 
 function OnSpectrePlugin@Surface
 {
-	if (Shiori.Reference[0] == "normal") { return "\s[0]"; }
-	else if (Shiori.Reference[0] == "embarrassed") { return "\s[1]"; }
-	else if (Shiori.Reference[0] == "smile") { return "\s[2]"; }
-	else if (Shiori.Reference[0] == "surprised") { return "\s[5]"; }
-	else if (Shiori.Reference[0] == "discouraged") { return "\s[6]"; } //It's a bit of a stretch, but... I think it really helps for the dissociated pool
+	if (Shiori.Reference[0] == "normal") return "\s[0]";
+	else if (Shiori.Reference[0] == "embarrassed") return "\s[1]";
+	else if (Shiori.Reference[0] == "smile") return "\s[2]";
+	else if (Shiori.Reference[0] == "surprised") return "\s[5]";
+	else if (Shiori.Reference[0] == "discouraged") return "\s[6]"; //It's a bit of a stretch, but... I think it really helps for the dissociated pool
 }
 
 function OnSpectrePlugin@Possession
 {
 	if (Random.GetIndex(0,4) == 0)
 	{
-		if (Shiori.Reference[1] == 1)
-		{
-			return Reflection.Get("SpectreTalk_spooky");
-		}
-		else
-		{
-			return Reflection.Get("SpectreTalk_{Shiori.Reference[0]}");
-		}
+		if (Shiori.Reference[1] == 1) return Reflection.Get("SpectreTalk_spooky");
+		else return Reflection.Get("SpectreTalk_{Shiori.Reference[0]}");
 	}
 }
 
@@ -157,11 +151,7 @@ talk SpectreTalk_spooky
 //—————————— Needle poking ——————————
 function OnNeedlePoke
 {
-	if (Shiori.Reference[0] == 0)
-	{
-		return NeedleTalk;
-	}
-	
+	if (Shiori.Reference[0] == 0) return NeedleTalk;
 }
 
 talk NeedleTalk

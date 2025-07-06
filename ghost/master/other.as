@@ -20,6 +20,13 @@ function OnTranslate
 	
 	talkstr = AutoPause(talkstr);
 	
+	//What I really want is a new option for TalkBuilder that lets you set specific tags at the start of a talk block... so you can pick balloons, fonts, balloon speeds, etc. Maybe even something to be appended at the end...? hm
+	if (CurrentBalloonName == "squidloon")
+	{
+		talkstr = talkstr.Replace("\b[0]","\b[{Save.Data.SquidloonColor}0]");
+		talkstr = talkstr.Replace("\b[2]","\b[{Save.Data.SquidloonColor}2]");
+	}
+	
 	return talkstr;
 }
 
@@ -102,6 +109,16 @@ function emdash
 	return "\f[name,calibri]—\f[name,default]";
 }
 
+function otherghostname
+{
+	OpenGhosts = [];
+	for (local i = 0; i < Shiori.Reference.length; i++)
+	{
+		local split = Shiori.Reference[i].Split("{(1).ToAscii()}");
+		OpenGhosts.Add(split[0]);
+	}
+}
+
 
 //—————————————————————————————— Right click menu links ——————————————————————————————
 function FormatLinks(links)
@@ -110,8 +127,8 @@ function FormatLinks(links)
 	for (i = 0; i < links.length; i++)
 	{
 		//Name then 0x01, URL then 0x02
-		output += links[i]["name"] + (1).ToAscii();
-		output += links[i]["url"] + (2).ToAscii();
+		output += links[i].name + (1).ToAscii();
+		output += links[i].url + (2).ToAscii();
 	}
 	return output;
 }
@@ -121,7 +138,7 @@ function sakura@recommendsites
 	return FormatLinks([
 		{name: "Zi's Ukagaka Space", url: "https://ukagaka.zichqec.com/"},
 		{name: "Merfolk May freeshell", url: "https://ako-kipali.tumblr.com/ghost-stuff"},
-		{name: "Aosora SHIORI", url: "https://github.com/kanadelab/aosora-shiori"}
+		{name: "Aosora SHIORI", url: "https://github.com/kanadelab/aosora-shiori"},
 	]);
 }
 
@@ -145,11 +162,11 @@ function getaistate
 	
 	for (local i = 0; i < Points.length; i++)
 	{
-		if (values != "") { values += ","; } //there might be a better method in aosora but i'm not sure
-		values += Points[i]["val"];
+		if (values != "") values += ","; //there might be a better method in aosora but i'm not sure
+		values += Points[i].val;
 		
-		if (labels != "") { labels += ","; }
-		labels += Points[i]["name"];
+		if (labels != "") labels += ",";
+		labels += Points[i].name;
 	}
 	
 	return values + "{(1).ToAscii}" + labels;	

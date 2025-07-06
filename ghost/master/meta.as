@@ -10,11 +10,11 @@ function OnInstallComplete
 	output += "\0\![set,serikotalk,false]Installed {Shiori.Reference[1]} ({Shiori.Reference[0]}).";
 	
 	//A little menu to open or change to the ghost that was installed immediately
-	if (!Shiori.Reference[0].IndexOf("ghost").IsNull())
+	if (Shiori.Reference[0].Contains("ghost"))
 	{
 		output += "\n\n\_q";
 		output += "\![*]\__q[OnInstallComplete@Action,call]Call {Shiori.Reference[1]}\__q  \![*]\__q[OnInstallComplete@Action,change]Change to {Shiori.Reference[1]}\__q\n\n";
-		output += "\![*]\q[Done,blank]";
+		output += "\![*]\__q[blank]Done\__q";
 	}
 	
 	return output;
@@ -114,7 +114,7 @@ function OnSNTPCompare
 	if (Shiori.Reference[3] != 0)
 	{
 		local s = "";
-		if (Shiori.Reference[3] != 1) { s = "s"; }
+		if (Shiori.Reference[3] != 1) s = "s";
 		
 		output += "\0\![set,serikotalk,false]The clock is off by {Shiori.Reference[3]} second{s}.\n\n";
 		
