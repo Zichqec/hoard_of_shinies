@@ -103,61 +103,58 @@ function OnBalloonColorMenu
 {
 	local output = "\C\![lock,balloonrepaint]\c\0\b[2]\![quicksection,1]";
 	
-	local LeftCol = [
-		{num: "00", name: "Old Rose"},
-		{num: "02", name: "Crimson"},
-		{num: "04", name: "Persimmon"},
-		{num: "06", name: "Mango"},
-		{num: "08", name: "Mantis"},
-		{num: "10", name: "Jade"},
-		{num: "12", name: "Cerulean"},
-		{num: "14", name: "Cosmic"},
-		{num: "16", name: "Baby Blue"},
-		{num: "18", name: "Thistle"},
-		{num: "20", name: "Jazzberry"},
-		{num: "22", name: "Wisteria"},
-		{num: "24", name: "Chestnut"},
-		{num: "26", name: "Vanilla"},
-		{num: "28", name: "Smoke"}
-	];
-	
-	local RightCol = [
-		{num: "01", name: "Amaranth"},
-		{num: "03", name: "Brick"},
-		{num: "05", name: "Coral"},
-		{num: "07", name: "Fawn"},
-		{num: "09", name: "Moss"},
-		{num: "11", name: "Verdegris"},
-		{num: "13", name: "Iceberg"},
-		{num: "15", name: "Yonder"},
-		{num: "17", name: "Quartz"},
-		{num: "19", name: "Lilac"},
-		{num: "21", name: "Orchid"},
-		{num: "23", name: "Ochre"},
-		{num: "25", name: "Tumbleweed"},
-		{num: "27", name: "Glass"},
-		{num: "29", name: "Ink"}
+	local Columns = [
+		[ //LeftCol
+			{num: "00", name: "Old Rose"},
+			{num: "02", name: "Crimson"},
+			{num: "04", name: "Persimmon"},
+			{num: "06", name: "Mango"},
+			{num: "08", name: "Mantis"},
+			{num: "10", name: "Jade"},
+			{num: "12", name: "Cerulean"},
+			{num: "14", name: "Cosmic"},
+			{num: "16", name: "Baby Blue"},
+			{num: "18", name: "Thistle"},
+			{num: "20", name: "Jazzberry"},
+			{num: "22", name: "Wisteria"},
+			{num: "24", name: "Chestnut"},
+			{num: "26", name: "Vanilla"},
+			{num: "28", name: "Smoke"},
+		],
+		[ //RightCol
+			{num: "01", name: "Amaranth"},
+			{num: "03", name: "Brick"},
+			{num: "05", name: "Coral"},
+			{num: "07", name: "Fawn"},
+			{num: "09", name: "Moss"},
+			{num: "11", name: "Verdegris"},
+			{num: "13", name: "Iceberg"},
+			{num: "15", name: "Yonder"},
+			{num: "17", name: "Quartz"},
+			{num: "19", name: "Lilac"},
+			{num: "21", name: "Orchid"},
+			{num: "23", name: "Ochre"},
+			{num: "25", name: "Tumbleweed"},
+			{num: "27", name: "Glass"},
+			{num: "29", name: "Ink"},
+		],
 	];
 	
 	output += "\n";
-	for (local i = 0; i < LeftCol.length; i++)
+	
+	for (local col = 0; col < Columns.length; col++)
 	{
-		local IsSelected = 0;
-		if (LeftCol[i].num == Save.Data.SquidloonColor) IsSelected = 1;
-		
-		if (IsSelected) output += "\f[bold,1]\![*]";
-		output += "\q[{LeftCol[i].name},OnChangeBalloonColor,squidloon,{LeftCol[i].num}]\n";
-		if (IsSelected) output += "\f[bold,default]";
-	}
-	output += "\_l[0,0]\n\_l[110]";
-	for (local i = 0; i < RightCol.length; i++)
-	{
-		local IsSelected = 0;
-		if (RightCol[i].num == Save.Data.SquidloonColor) IsSelected = 1;
-		
-		if (IsSelected) output += "\f[bold,1]\![*]";
-		output += "\q[{RightCol[i].name},OnChangeBalloonColor,squidloon,{RightCol[i].num}]\n\_l[110]";
-		if (IsSelected) output += "\f[bold,default]";
+		for (local i = 0; i < Columns[col].length; i++)
+		{
+			local IsSelected = 0;
+			if (Columns[col][i].num == Save.Data.SquidloonColor) IsSelected = 1;
+			local tag = "\q[{Columns[col][i].name},OnChangeBalloonColor,squidloon,{Columns[col][i].num}]\n";
+			if (col != 0) tag += "\_l[110]";
+			
+			if (IsSelected) output += "\f[bold,1]\![*]{tag}\f[bold,default]";
+			else output += "{tag}";
+		}
+		if (col == 0) output += "\_l[0,0]\n\_l[110]";
 	}
 	
 	output += "\n\f[align,left]\n";
