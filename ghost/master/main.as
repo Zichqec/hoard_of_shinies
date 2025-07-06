@@ -16,11 +16,6 @@ function OnAosoraLoad
 	TalkBuilder.Default.AutoLineBreak = "\n\w8\w4";
 	TalkBuilder.Default.Head = "\0\b[0]";
 	
-	OpenGhosts = [];
-	MicaSongChoice = "";
-	MicaSongParticipants = [];
-	MicaSongNonParticipants = [];
-	
 	LastTalk = "";
 }
 
