@@ -5,11 +5,11 @@ function OnSpectrePlugin@ConfirmCalibration
 
 function OnSpectrePlugin@Surface
 {
-	if (Shiori.Reference[0] == "normal") { return "\s[0]"; }
-	else if (Shiori.Reference[0] == "embarrassed") { return "\s[1]"; }
-	else if (Shiori.Reference[0] == "smile") { return "\s[2]"; }
-	else if (Shiori.Reference[0] == "surprised") { return "\s[5]"; }
-	else if (Shiori.Reference[0] == "discouraged") { return "\s[6]"; } //It's a bit of a stretch, but... I think it really helps for the dissociated pool
+	if (Shiori.Reference[0] == "normal") return "\s[0]";
+	else if (Shiori.Reference[0] == "embarrassed") return "\s[1]";
+	else if (Shiori.Reference[0] == "smile") return "\s[2]";
+	else if (Shiori.Reference[0] == "surprised") return "\s[5]";
+	else if (Shiori.Reference[0] == "discouraged") return "\s[6]"; //It's a bit of a stretch, but... I think it really helps for the dissociated pool
 }
 
 function OnSpectrePlugin@Possession
