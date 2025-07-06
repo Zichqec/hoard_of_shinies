@@ -16,14 +16,8 @@ function OnSpectrePlugin@Possession
 {
 	if (Random.GetIndex(0,4) == 0)
 	{
-		if (Shiori.Reference[1] == 1)
-		{
-			return Reflection.Get("SpectreTalk_spooky");
-		}
-		else
-		{
-			return Reflection.Get("SpectreTalk_{Shiori.Reference[0]}");
-		}
+		if (Shiori.Reference[1] == 1) return Reflection.Get("SpectreTalk_spooky");
+		else return Reflection.Get("SpectreTalk_{Shiori.Reference[0]}");
 	}
 }
 
@@ -157,11 +151,7 @@ talk SpectreTalk_spooky
 //—————————— Needle poking ——————————
 function OnNeedlePoke
 {
-	if (Shiori.Reference[0] == 0)
-	{
-		return NeedleTalk;
-	}
-	
+	if (Shiori.Reference[0] == 0) return NeedleTalk;
 }
 
 talk NeedleTalk

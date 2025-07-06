@@ -114,7 +114,7 @@ function OnSNTPCompare
 	if (Shiori.Reference[3] != 0)
 	{
 		local s = "";
-		if (Shiori.Reference[3] != 1) { s = "s"; }
+		if (Shiori.Reference[3] != 1) s = "s";
 		
 		output += "\0\![set,serikotalk,false]The clock is off by {Shiori.Reference[3]} second{s}.\n\n";
 		

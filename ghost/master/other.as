@@ -127,8 +127,8 @@ function FormatLinks(links)
 	for (i = 0; i < links.length; i++)
 	{
 		//Name then 0x01, URL then 0x02
-		output += links[i]["name"] + (1).ToAscii();
-		output += links[i]["url"] + (2).ToAscii();
+		output += links[i].name + (1).ToAscii();
+		output += links[i].url + (2).ToAscii();
 	}
 	return output;
 }
@@ -163,10 +163,10 @@ function getaistate
 	for (local i = 0; i < Points.length; i++)
 	{
 		if (values != "") values += ","; //there might be a better method in aosora but i'm not sure
-		values += Points[i]["val"];
+		values += Points[i].val;
 		
 		if (labels != "") labels += ",";
-		labels += Points[i]["name"];
+		labels += Points[i].name;
 	}
 	
 	return values + "{(1).ToAscii}" + labels;	

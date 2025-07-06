@@ -64,14 +64,9 @@ function OnClose()
 	
 	//If there is a special closing dialogue, use it
 	local SpecialClose = Reflection.Get("CloseTalk_{Save.Data.SpecialClose[0]}");
-	if (SpecialClose.IsObject())
-	{
-		output += SpecialClose();
-	}
-	else //Otherwise, default
-	{
-		output += CloseTalk();
-	}
+	
+	if (SpecialClose.IsObject()) output += SpecialClose();
+	else output += CloseTalk(); //Otherwise, default
 	
 	return output + "\_w[2000]\-";
 }
