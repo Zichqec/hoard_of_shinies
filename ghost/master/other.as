@@ -20,6 +20,13 @@ function OnTranslate
 	
 	talkstr = AutoPause(talkstr);
 	
+	//What I really want is a new option for TalkBuilder that lets you set specific tags at the start of a talk block... so you can pick balloons, fonts, balloon speeds, etc. Maybe even something to be appended at the end...? hm
+	if (CurrentBalloonName == "squidloon")
+	{
+		talkstr = talkstr.Replace("\b[0]","\b[{Save.Data.SquidloonColor}0]");
+		talkstr = talkstr.Replace("\b[2]","\b[{Save.Data.SquidloonColor}2]");
+	}
+	
 	return talkstr;
 }
 
@@ -131,7 +138,7 @@ function sakura@recommendsites
 	return FormatLinks([
 		{name: "Zi's Ukagaka Space", url: "https://ukagaka.zichqec.com/"},
 		{name: "Merfolk May freeshell", url: "https://ako-kipali.tumblr.com/ghost-stuff"},
-		{name: "Aosora SHIORI", url: "https://github.com/kanadelab/aosora-shiori"}
+		{name: "Aosora SHIORI", url: "https://github.com/kanadelab/aosora-shiori"},
 	]);
 }
 
@@ -155,10 +162,10 @@ function getaistate
 	
 	for (local i = 0; i < Points.length; i++)
 	{
-		if (values != "") { values += ","; } //there might be a better method in aosora but i'm not sure
+		if (values != "") values += ","; //there might be a better method in aosora but i'm not sure
 		values += Points[i]["val"];
 		
-		if (labels != "") { labels += ","; }
+		if (labels != "") labels += ",";
 		labels += Points[i]["name"];
 	}
 	

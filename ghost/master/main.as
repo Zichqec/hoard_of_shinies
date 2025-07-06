@@ -4,6 +4,7 @@ function OnAosoraDefaultSaveData
 	Save.Data.TalkInterval = 180;
 	Save.Data.Username = "friend";
 	Save.Data.SpecialClose = []; //Don't really want to save this but it's QOL for me who reloads a lot...
+	Save.Data.SquidloonColor = "0";
 	Save.Data.ReducedMotion = 0;
 }
 
@@ -13,6 +14,7 @@ function OnAosoraLoad
 	TalkTimer.RandomTalk = OnAITalk;
 	TalkTimer.RandomTalkIntervalSeconds = Save.Data.TalkInterval;
 	TalkBuilder.Default.AutoLineBreak = "\n\w8\w4";
+	TalkBuilder.Default.Head = "\0\b[0]";
 	
 	OpenGhosts = [];
 	MicaSongChoice = "";
