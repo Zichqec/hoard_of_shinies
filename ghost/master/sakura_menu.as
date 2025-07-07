@@ -28,10 +28,6 @@ function OnSakuraMenu
 	
 	output += "\n\n";
 	
-	output += "\![*]\__q[OnMicaSong@Start]Sing\__q";
-	
-	output += "\n\n";
-	
 	output += "\![*]\q[Settings,OnSettings]";
 	
 	output += "\n\n";
