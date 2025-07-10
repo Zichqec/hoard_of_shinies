@@ -52,7 +52,7 @@ function OnSettings
 	output += "\f[align,center]{emdash} Settings {emdash}\n\f[align,left]\n";
 	
 	//Talkrate changer
-	output += "\![*]Talkrate:\n";
+	output += "\![*]Talk rate:\n";
 	local times = TalkTimes();
 	
 	for (i = 0; i < times.length; i++)
