@@ -46,15 +46,15 @@ function AutoPause(talkstr)
 	return talkstr;
 }
 
-//Call coming from menu, or hotkey
-function OnStartTalk
+//Call coming from menu, hotkey, or \a
+function OnAITalk
 {
 	LastTalk = TalkTimer.CallRandomTalk();
 	return LastTalk;
 }
 
-//Call coming from TalkTimer or \a tag
-function OnAITalk
+//Call coming from TalkTimer
+function OnSendTalk
 {
 	LastTalk = Reflection.Get("RandomTalk")();
 	return LastTalk;
@@ -71,7 +71,7 @@ function OnAnchorSelect
 function OnKeyPress
 {
 	if (Shiori.Reference[0] == "f1") { return "\![open,readme]"; }
-	else if (Shiori.Reference[0] == "t") { return OnStartTalk; }
+	else if (Shiori.Reference[0] == "t") { return OnAITalk; }
 	else if (Shiori.Reference[0] == "r") { return OnLastTalk; }
 }
 

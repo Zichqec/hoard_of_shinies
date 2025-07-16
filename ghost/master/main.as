@@ -11,7 +11,7 @@ function OnAosoraDefaultSaveData
 //Values to be set upon loading
 function OnAosoraLoad
 {
-	TalkTimer.RandomTalk = OnAITalk;
+	TalkTimer.RandomTalk = OnSendTalk;
 	TalkTimer.RandomTalkIntervalSeconds = Save.Data.TalkInterval;
 	TalkBuilder.Default.AutoLineBreak = "\n\w8\w4";
 	TalkBuilder.Default.Head = "\0\b[0]";
