@@ -372,3 +372,42 @@ talk RandomTalk
 	
 	\s[1]\i[450]... And then I have a lot of work to do.\s[1]
 }
+
+talk RandomTalk
+{
+	\s[0]... \w8\w8\s[6]\i[4]Hm. Didn't I leave that {coolrock} we found up on the ledge here?
+	
+	\s[6]Maybe someone else got in here, or a current knocked it down, or... \w8\s[1]or I knocked it over...
+}
+
+talk RandomTalk
+{
+	\s[0]I can't decide what's better: adventuring and finding treasure, or coming back here and organizing it all.
+	
+	\s[2]Adventuring is so much fun! \s[4]There's nothing like swimming freely in the open ocean, or spotting a new shipwreck, or opening an untouched treasure chest...
+	
+	\s[5]But then again... \s[3]Looking at it all in here, gleaming and sparkling together... getting to arrange it just so?
+	
+	\w8\s[2]Ohh, how could I possibly choose~!
+}
+
+talk RandomTalk
+{
+	\s[0]Have you heard old man Rodger talk about the rain? Apparently he likes to go up to the surface when it's raining, he says it feels invigorating or something like that.
+	
+	\s[1]I tried it once, but it's not for me. \s[6]The surface feels so... vulnerable. And the rain felt like it was attacking my fins. \s[1]So I came back under where it's safe...
+}
+
+talk RandomTalk
+{
+	\s[0]Do you think there will always be new things to find? Or, one day... \s[5]will we have explored the ENTIRE ocean?
+	
+	\w8\w8... \s[1]That's silly, even old man Rodger still sees new stuff all the time...
+}
+
+talk RandomTalk
+{
+	\s[0]I wonder... do we have enough {rubies} that I could sort them by color? I mean, they're overall the same color, but... \s[1]there are minor differences if you look close.
+	
+	\s[4]It might be fun to make a gradient~!
+}
