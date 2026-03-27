@@ -13,6 +13,7 @@ talk OnFirstBoot
 	\s[0]\i[450]But you'll wanna have a look around first to get used to it, right? \s[4]Right! \s[0]Let's hang out here for a while then, I can wait.
 }
 
+
 //—————————————————————————————— Booting ——————————————————————————————
 talk BootTalk
 {
