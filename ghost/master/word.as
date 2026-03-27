@@ -283,3 +283,15 @@ function forks
 		"cups",
 	]);
 }
+
+function coolrock
+{
+	return Random.Select([
+		"cool rock",
+		"broken amulet",
+		"cracked mirror",
+		"knotted piece of kelp",
+		"perfect snail shell",
+		"clam",
+	]);
+}

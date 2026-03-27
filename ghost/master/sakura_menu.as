@@ -21,7 +21,7 @@ function OnSakuraMenu
 	output += "\![quicksection,true]\![no-autopause]";
 	
 	//Talk and repeat buttons
-	output += "\![*]\q[Talk,OnStartTalk]  ";
+	output += "\![*]\q[Talk,OnAITalk]  ";
 	
 	if (LastTalk == "") output += "\f[color,disable]\![*]Repeat\f[color,default]";
 	else output += "\![*]\q[Repeat,OnLastTalk]";
