@@ -210,6 +210,20 @@ talk OnPhantaEepy
 	\![set,balloonwait,2.5]\s[9]Z z z...
 }
 
+talk OnPhantaEepy
+{
+	\s[1]Ooh... \![set,balloonwait,1.7]I'm getting SO sleepy...
+	
+	\![set,balloonwait,2.5]\s[9]Z z z...
+}
+
+talk OnPhantaEepy
+{
+	\s[1]Did it just... \![set,balloonwait,1.7]get a lot sleepier in here...?
+	
+	\![set,balloonwait,2.5]\s[9]Z z z...
+}
+
 
 //—————————— LOBO howling ——————————
 talk OnLoboHowl
@@ -225,6 +239,16 @@ talk OnLoboHowl
 talk OnLoboHowl
 {
 	\s[5]Ohh, do you hear that? \s[3]I love listening to the whales sing...
+}
+
+talk OnLoboHowl
+{
+	\s[5]Wow... \s[2]I hear whalesong! \s[0]Do you think it's close by? \s[2]Maybe if we head outside, we could see it!
+}
+
+talk OnLoboHowl
+{
+	\s[5]Oh...! \s[2]There's a whale, I hear a whale! {username}, do you hear it? \s[5]Ohh, maybe we should go check if we can see it from here~!
 }
 
 
@@ -253,4 +277,16 @@ talk SquidBootTalk
 	\s[5]... A squid. \s[2]{username}, I see a squid over there, look...!
 	
 	\s[5]So pretty... \s[4]I wish I could change colors like that.
+}
+
+talk SquidBootTalk
+{
+	\s[5]... Whoa... \s[2]Pretty squid, pretty squid~! Look...!
+}
+
+talk SquidBootTalk
+{
+	\s[5]... Ohh... {username}, look at the pretty colors on that squid...!
+	
+	\s[4]I wanna be colorful too~!
 }
