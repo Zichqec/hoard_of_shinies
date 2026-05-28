@@ -411,3 +411,73 @@ talk RandomTalk
 	
 	\s[4]It might be fun to make a gradient~!
 }
+
+talk RandomTalk
+{
+	\s[0]Sometimes, I kinda wish I didn't live so far away from here. \s[2]And then I think, maybe I should just move in!
+	
+	... \s[1]But I think if I lived here, I might not actually leave... \s[6]or sleep.
+	
+	\s[2]I guess I'll stay where I'm at. My cave at home is cozy anyway.
+}
+
+talk RandomTalk
+{
+	\s[0]I wanna hang that chain we found somewhere nice that the light will catch it... \s[5]Ooh, do you think we could hang other treasures off of it, too?
+	
+	\s[2]Imagine if we could get a bunch of {rubies} hanging from it, how pretty would that be!
+}
+
+talk RandomTalk
+{
+	\s[0]How many treasures do you think we'll have a year from now? \s[2]If we get really lucky, maybe our hoard will have doubled by then!
+	
+	... \s[6]I hope we don't run out of space \f[italic,1]too\f[italic,default] quickly...
+}
+
+talk RandomTalk
+{
+	\s[1]I startled a squid earlier. I didn't even see it until I was about to be enveloped by a big cloud of ink.
+	
+	\s[6]I feel pretty bad about it. If I'd seen it there I'd have moved more carefully...
+}
+
+talk RandomTalk
+{
+	\s[5]The other day when I was near the surface, I found another one of those bottles that has a mysterious paper in it.
+	
+	\s[2]I wonder what it means! \s[0]I pulled it down here and stashed it where it can't float away. We'll have to take it to the market later and get it checked out by an expert.
+}
+
+talk RandomTalk
+{
+	\s[5]Oh... \s[6]that stack of {plainmetal} stuff looks like it's ready to fall over, let me fix that...
+}
+
+talk RandomTalk
+{
+	\s[0]I've been trying to decide what to do with some of the gems we've brought in that have chips... is it better to keep them together with the flawless ones, or should we try something else?
+	
+	\s[5]It might be fun to create a little display with them, or use them to fill a bowl, or...
+}
+
+talk RandomTalk
+{
+	\s[0]Sometimes I see others at the market trading in their gems for various goods.
+	
+	\s[6]I don't know how they do it. \s[1]Aren't those gems important to them? How can they stand to be separated? \s[6]Won't they regret it later and spend ages wishing they hadn't given their precious treasures away?
+}
+
+talk RandomTalk
+{
+	\s[0]Maybe we should finish up here soon and head out. \s[2]There's treasure to hunt!
+	
+	... \s[0]But, a little more time admiring couldn't hurt either...
+}
+
+talk RandomTalk
+{
+	\s[0]Do you think there'll ever be a point where our collection is totally complete?
+	
+	... \s[2]Nah, no way~
+}
