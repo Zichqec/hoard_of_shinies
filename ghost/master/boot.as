@@ -78,6 +78,13 @@ talk BootTalk
 	\s[2]It's \f[italic,1]huge\f[italic,default], I've never seen one so big! Hehehe~
 }
 
+talk BootTalk
+{
+	\s[2]{username}, {username}, {username}! \s[3]I'm so glad you're here, {username}!
+	
+	\s[2]Come see what's new, come see what's new~!
+}
+
 
 //—————————————————————————————— Closing ——————————————————————————————
 talk CloseTalk
